@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZOS-Canary</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="time.js"></script>
-    <script src="script.js"></script>
-    <script src="tab.js"></script>
-    
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
-
-</head>
-<body background="images/windows.jpg">
-    <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">EZOS</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EZOS-Canary</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    </head>
+    <body background="images/windows.jpg">
+        <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">EZOS</h1>
 <!------------------------->
 <!--        上バー        -->
 <!------------------------->
@@ -33,7 +26,6 @@
                     <span id="control_center_fullscreen_change"><span class="app_icon" onclick="fullscreen()"><img src="images/fullscreen.png" height="24px" width="24px"></span></span>
                     <span class="app_icon" onclick="reload()"><img src="images/reload.png" height="24px" width="24px"></span>
                 </span>
-                
                 <span style="font-size: 22px;" onclick="mute_change()">🔊</span>
                 <input type="range" id="control_center_volume" min="0" max="100" step="5">
             </span>
@@ -62,12 +54,12 @@
 <!------------------------->
         <span id="hidari">
             <span id="hidari_items">
-            <span id="virtual_window_button" onclick="virtual_window_open()">❑</span>
-            <span id="virtual_window" hidden>
-                デスク 仮想デスク1 仮想デスク2 仮想デスク3 仮想デスク4
-            </span>
-            <span id="all_app_changer"><span id="all_app_button" onclick="all_app_open()">＋</span></span>
-            <span id="search_changer"><span id="search_button" onclick="search_open()">🔍</span></span>
+                <span id="virtual_window_button" onclick="virtual_window_open()">❑</span>
+                    <span id="virtual_window" hidden>
+                        デスク 仮想デスク1 仮想デスク2 仮想デスク3 仮想デスク4
+                    </span>
+                <span id="all_app_changer"><span id="all_app_button" onclick="all_app_open()">＋</span></span>
+                <span id="search_changer"><span id="search_button" onclick="search_open()">🔍</span></span>
             </span>
         </span>
     </span>
@@ -86,38 +78,44 @@
 <span id="all_app">        
     <span id="all_app_l1">
         <span class="app_icon" onclick="internet_open()"><img src="images/internet.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">インターネット</p>
+            <p class="app_icon_name">インターネット</p>
         <span class="app_icon" onclick="music_player_open()"><img src="images/musicplayer.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">ミュージックプレーヤー</p>
+            <p class="app_icon_name">ミュージックプレーヤー</p>
         <span class="app_icon" onclick="setting_open()"><img src="images/setting.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">設定</p>
+            <p class="app_icon_name">設定</p>
         <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">フィードバック</p>
+            <p class="app_icon_name">フィードバック</p>
         <span class="app_icon" onclick="addon_store_open()"><img src="images/store.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">アドオンストア</p>
+            <p class="app_icon_name">アドオンストア</p>
         <span class="app_icon" onclick="clock_open()"><img src="images/clock.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">時計</p>
+            <p class="app_icon_name">時計</p>
     </span>
     <span id="all_app_l2">
         <span class="app_icon" onclick="cal_open()"><img src="images/cal.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">電卓</p>
+            <p class="app_icon_name">電卓</p>
         <span class="app_icon" onclick="memo_open()"><img src="images/memo.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">メモ帳</p>
+            <p class="app_icon_name">メモ帳</p>
         <span class="app_icon" onclick="filer_open()"><img src="images/file.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">ファイラー</p>
+            <p class="app_icon_name">ファイラー</p>
         <span class="app_icon" onclick="camera_open()"><img src="images/camera.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">カメラ</p>
+            <p class="app_icon_name">カメラ</p>
         <span class="app_icon" onclick="map_open()"><img src="images/map.png" height="24px" width="24px"></span>
-        <p class="app_icon_name">地図</p>
+            <p class="app_icon_name">地図</p>
     </span>
 </span>
-
+<!------------------------->
+<!--     /アプリセンター   -->
+<!--     サーチ           -->
+<!------------------------->
 <span id="search">
     <input type="search" placeholder="アプリ、サイトをここで検索" style="width: 250px; border-radius: 10px; height: 30px; font-size: large;">
     <p style="text-align: center; font-size: large;">検索履歴</p>
     <p style="text-align: center; font-size: large;">ToDoリスト</p>
 </span>
-
+<!------------------------->
+<!--     /サーチ          -->
+<!--     アプリ           -->
+<!------------------------->
     <span id="internet" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">インターネット</span>
@@ -488,13 +486,14 @@ window.onload = () => {
         <span class="app_body">
             ファイル
         </span>
-
+<!------------------------->
+<!--     /アプリ          -->
+<!------------------------->
     <script src="tab.js"></script>
-    
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    <script src="time.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
 </span>
 </body>
 </html>
