@@ -6,13 +6,13 @@ function theme_change() {
   $(".app_icon").addClass("black");
   document.getElementById("control_center").classList.add("white");
   document.getElementById("all_app").classList.add("white");
-  $("#sita_icon_internet").html('<img src="images/internet_01.png" width="24px" height="24px">');
-  $("#sita_icon_music_player").html('<img src="images/musicplayer_01.png" width="24px" height="24px">');
-  $("#sita_icon_setting").html('<img src="images/setting_01.png" width="24px" height="24px">');
-  $("#sita_icon_feedback").html('<img src="images/feedback_01.png" width="24px" height="24px">');
-  $("#sita_icon_addon_store").html('<img src="images/store_01.png" width="24px" height="24px">');
-  $("#sita_icon_clock").html('<img src="images/clock_01.png" width="24px" height="24px">');
-  $("#sita_icon_cal").html('<img src="images/cal_01.png" width="24px" height="24px">');
+  $("#sita_icon_internet").html('<img src="images/internet_01.png">');
+  $("#sita_icon_music_player").html('<img src="images/musicplayer_01.png">');
+  $("#sita_icon_setting").html('<img src="images/setting_01.png">');
+  $("#sita_icon_feedback").html('<img src="images/feedback_01.png">');
+  $("#sita_icon_addon_store").html('<img src="images/store_01.png">');
+  $("#sita_icon_clock").html('<img src="images/clock_01.png">');
+  $("#sita_icon_cal").html('<img src="images/cal_01.png">');
 }
 
 // bar
@@ -33,12 +33,12 @@ function reload() {
 }
 
 function fullscreen() {
-  document.getElementById("control_center_fullscreen_change").innerHTML = '<span class="app_icon" onclick="exit_fullscreen()">⬜</span>';
+  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="exit_fullscreen()">⬜</span>';
   document.documentElement.requestFullscreen();
 }
 
 function exit_fullscreen() {
-  document.getElementById("control_center_fullscreen_change").innerHTML = '<span class="app_icon" onclick="fullscreen()">⬜</span>';
+  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="fullscreen()">⬜</span>';
   document.exitFullscreen();
 }
 // //bar_control_center
@@ -81,14 +81,14 @@ function setting_close() {
     document.getElementById("setting").classList.add("app_close_anime");
 }
 
-function setting_size_change() {
+function setting_size() {
     document.getElementById("setting").classList.add("app_size");
-    document.getElementById("setting_size_changer").innerHTML = '<span class="app_size_change" onclick="setting_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+    document.getElementById("setting_size").innerHTML = '<span class="app_size_change" onclick="setting_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function setting_size_return() {
     document.getElementById("setting").classList.remove("app_size");
-    document.getElementById("setting_size_changer").innerHTML = '<span class="app_size_change" onclick="setting_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+    document.getElementById("setting_size").innerHTML = '<span class="app_size_change" onclick="setting_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_setting
 
@@ -102,14 +102,14 @@ function feedback_close() {
     document.getElementById("feedback").classList.add("app_close_anime");
 }
 
-function feedback_size_change() {
+function feedback_size() {
   document.getElementById("feedback").classList.add("app_size");
-  document.getElementById("feedback_size_changer").innerHTML = '<span class="app_size_change" onclick="feedback_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("feedback_size").innerHTML = '<span class="app_size_change" onclick="feedback_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function feedback_size_return() {
   document.getElementById("feedback").classList.remove("app_size");
-  document.getElementById("feedback_size_changer").innerHTML = '<span class="app_size_change" onclick="feedback_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("feedback_size").innerHTML = '<span class="app_size_change" onclick="feedback_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_feedback
 
@@ -123,14 +123,14 @@ function music_player_close() {
     document.getElementById("music_player").classList.add("app_close_anime");
 }
 
-function music_player_size_change() {
+function music_player_size() {
   document.getElementById("music_player").classList.add("app_size");
-  document.getElementById("music_player_size_changer").innerHTML = '<span class="app_size_change" onclick="music_player_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("music_player_size").innerHTML = '<span class="app_size_change" onclick="music_player_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function music_player_size_return() {
   document.getElementById("music_player").classList.remove("app_size");
-  document.getElementById("music_player_size_changer").innerHTML = '<span class="app_size_change" onclick="music_player_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("music_player_size").innerHTML = '<span class="app_size_change" onclick="music_player_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_music_player
 
@@ -144,14 +144,14 @@ function addon_store_close() {
     document.getElementById("addon_store").classList.add("app_close_anime");
 }
 
-function addon_store_size_change() {
+function addon_store_size() {
   document.getElementById("addon_store").classList.add("app_size");
-  document.getElementById("addon_store_size_changer").innerHTML = '<span class="app_size_change" onclick="addon_store_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("addon_store_size").innerHTML = '<span class="app_size_change" onclick="addon_store_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function addon_store_size_return() {
   document.getElementById("addon_store").classList.remove("app_size");
-  document.getElementById("addon_store_size_changer").innerHTML = '<span class="app_size_change" onclick="addon_store_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("addon_store_size").innerHTML = '<span class="app_size_change" onclick="addon_store_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_addon_store
 
@@ -165,14 +165,14 @@ function memo_close() {
   document.getElementById("memo").classList.add("app_close_anime");
 }
 
-function memo_size_change() {
+function memo_size() {
 document.getElementById("memo").classList.add("app_size");
-document.getElementById("memo_size_changer").innerHTML = '<span class="app_size_change" onclick="memo_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+document.getElementById("memo_size").innerHTML = '<span class="app_size_change" onclick="memo_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function memo_size_return() {
 document.getElementById("memo").classList.remove("app_size");
-document.getElementById("memo_size_changer").innerHTML = '<span class="app_size_change" onclick="memo_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+document.getElementById("memo_size").innerHTML = '<span class="app_size_change" onclick="memo_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_memo
 
@@ -186,14 +186,14 @@ function internet_close() {
   document.getElementById("internet").classList.add("app_close_anime");
 }
 
-function internet_size_change() {
+function internet_size() {
   document.getElementById("internet").classList.add("app_size");
-  document.getElementById("internet_size_changer").innerHTML = '<span class="app_size_change" onclick="internet_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("internet_size").innerHTML = '<span class="app_size_change" onclick="internet_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function internet_size_return() {
   document.getElementById("internet").classList.remove("app_size");
-  document.getElementById("internet_size_changer").innerHTML = '<span class="app_size_change" onclick="internet_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("internet_size").innerHTML = '<span class="app_size_change" onclick="internet_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_internet
 
@@ -207,14 +207,14 @@ function clock_close() {
     document.getElementById("clock").classList.add("app_close_anime");
 }
 
-function clock_size_change() {
+function clock_size() {
   document.getElementById("clock").classList.add("app_size");
-  document.getElementById("clock_size_changer").innerHTML = '<span class="app_size_change" onclick="clock_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("clock_size").innerHTML = '<span class="app_size_change" onclick="clock_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function clock_size_return() {
   document.getElementById("clock").classList.remove("app_size");
-  document.getElementById("clock_size_changer").innerHTML = '<span class="app_size_change" onclick="clock_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("clock_size").innerHTML = '<span class="app_size_change" onclick="clock_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_clock
 
@@ -228,14 +228,14 @@ function cal_close() {
     document.getElementById("cal").classList.add("app_close_anime");
 }
 
-function cal_size_change() {
+function cal_size() {
   document.getElementById("cal").classList.add("app_size");
-  document.getElementById("cal_size_changer").innerHTML = '<span class="app_size_change" onclick="cal_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+  document.getElementById("cal_size").innerHTML = '<span class="app_size_change" onclick="cal_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function cal_size_return() {
   document.getElementById("cal").classList.remove("app_size");
-  document.getElementById("cal_size_changer").innerHTML = '<span class="app_size_change" onclick="cal_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+  document.getElementById("cal_size").innerHTML = '<span class="app_size_change" onclick="cal_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_cal
 
@@ -249,14 +249,14 @@ function camera_close() {
   document.getElementById("camera").classList.add("app_close_anime");
 }
 
-function camera_size_change() {
+function camera_size() {
 document.getElementById("camera").classList.add("app_size");
-document.getElementById("camera_size_changer").innerHTML = '<span class="app_size_change" onclick="camera_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+document.getElementById("camera_size").innerHTML = '<span class="app_size_change" onclick="camera_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function camera_size_return() {
 document.getElementById("camera").classList.remove("app_size");
-document.getElementById("camera_size_changer").innerHTML = '<span class="app_size_change" onclick="camera_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+document.getElementById("camera_size").innerHTML = '<span class="app_size_change" onclick="camera_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_camera
 
@@ -270,14 +270,14 @@ function map_close() {
   document.getElementById("map").classList.add("app_close_anime");
 }
 
-function map_size_change() {
+function map_size() {
 document.getElementById("map").classList.add("app_size");
-document.getElementById("map_size_changer").innerHTML = '<span class="app_size_change" onclick="map_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+document.getElementById("map_size").innerHTML = '<span class="app_size_change" onclick="map_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function map_size_return() {
 document.getElementById("map").classList.remove("app_size");
-document.getElementById("map_size_changer").innerHTML = '<span class="app_size_change" onclick="map_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+document.getElementById("map_size").innerHTML = '<span class="app_size_change" onclick="map_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_map
 
@@ -291,14 +291,14 @@ function filer_close() {
   document.getElementById("filer").classList.add("app_close_anime");
 }
 
-function filer_size_change() {
+function filer_size() {
 document.getElementById("filer").classList.add("app_size");
-document.getElementById("filer_size_changer").innerHTML = '<span class="app_size_change" onclick="filer_size_return()"><img src="images/syukusyou.png" height="24px" width="24px"></span>';
+document.getElementById("filer_size").innerHTML = '<span class="app_size_change" onclick="filer_size_return()"><img src="images/syukusyou.png"></span>';
 }
 
 function filer_size_return() {
 document.getElementById("filer").classList.remove("app_size");
-document.getElementById("filer_size_changer").innerHTML = '<span class="app_size_change" onclick="filer_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span>';
+document.getElementById("filer_size").innerHTML = '<span class="app_size_change" onclick="filer_size()"><img src="images/kakudai.png"></span>';
 }
 // //app_filer
 
