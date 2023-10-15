@@ -25,11 +25,12 @@ body {
     color: #fff;
 } #control_center_button {
     position: absolute;
-    width: 24px;
-    height: 24px;
     right: 5px;
     top: 0px;
-} 
+} #control_center_button img {
+    width: 24px;
+    height: 24px;
+}
 
 #control_center {
     display: none;
@@ -53,7 +54,7 @@ body {
     position: absolute;
     top: 97.5px;
     left: 52.5px;
-} #control_center_volume {
+} #volume {
     margin-top: 125px;
     width: 200px;
 }
@@ -83,9 +84,10 @@ body {
     z-index: 1
 } .sita_icon {
     padding: 5px;
+    transition: 0.30s;
+} .sita_icon img {
     width: 24px;
     height: 24px;
-    transition: 0.30s;
 }
 
 #hidari {
@@ -153,13 +155,15 @@ body {
 } 
 
 .app_icon {
-    height: 24px;
-    width: 24px;
     padding: 15px;
     border-radius: 50%;
     transition: 0.20s;
     border: 2px solid white;
-} .app_icon:hover {
+} .app_icon img {
+    height: 24px;
+    width: 24px;
+} 
+.app_icon:hover {
     padding: 20px;
     border-radius: 150px;
     transition: 0.20s;
@@ -174,14 +178,14 @@ body {
 
 /* //bar */ 
 /* bar_animes */ 
-@keyframes loadanime_ue {
+@keyframes loadanime_sita {
     0% {
         transform: translateY(60px);
     } 100% {
         transform: translateY(0px);
     }
 } 
-@keyframes loadanime_sita {
+@keyframes loadanime_ue {
     0% {
         transform: translateY(-60px);
     } 100% {
@@ -273,21 +277,28 @@ body {
     cursor: pointer;
 } .app_close {
     position: absolute;
-    width: 24px;
-    height: 24px;
+    top: 50%;
     right: 0px;
     padding-top: 5px;
     padding-right: 20px;
+    transform: translate(0%, -50%);
     cursor: pointer;
-} .app_size_change {
-    position: absolute;
+} .app_close img {
     width: 24px;
     height: 24px;
+} 
+.app_size_change {
+    position: absolute;
+    top: 50%;
     right: 0px;
     padding-top: 5px;
     margin-right: 55px;
+    transform: translate(0%, -50%);
     cursor: pointer;
-} 
+} .app_size_change img {
+    width: 24px;
+    height: 24px;
+}
 
 .app_body {
     position: absolute;
