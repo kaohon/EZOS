@@ -25,9 +25,10 @@ body {
     color: #fff;
 } #control_center_button {
     position: absolute;
+    width: 24px;
+    height: 24px;
     right: 5px;
     top: 0px;
-    font-size: 20px;
 } 
 
 #control_center {
@@ -82,7 +83,8 @@ body {
     z-index: 1
 } .sita_icon {
     padding: 5px;
-    font-size: 24px;
+    width: 24px;
+    height: 24px;
     transition: 0.30s;
 }
 
@@ -151,6 +153,8 @@ body {
 } 
 
 .app_icon {
+    height: 24px;
+    width: 24px;
     padding: 15px;
     border-radius: 50%;
     transition: 0.20s;
@@ -269,17 +273,19 @@ body {
     cursor: pointer;
 } .app_close {
     position: absolute;
+    width: 24px;
+    height: 24px;
     right: 0px;
     padding-top: 5px;
     padding-right: 20px;
-    font-size: 32px;
     cursor: pointer;
 } .app_size_change {
     position: absolute;
+    width: 24px;
+    height: 24px;
     right: 0px;
     padding-top: 5px;
     margin-right: 55px;
-    font-size: 32px;
     cursor: pointer;
 } 
 
