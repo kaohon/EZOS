@@ -1,11 +1,12 @@
 body {
-    font-family: Yu Gothic UI Semilight;
-    
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
+    font-family: Yu Gothic UI Semilight; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* bar */
 
 #ue {
     position: absolute;
@@ -14,9 +15,62 @@ user-select: none;
     height: 30px;
     width: 100%;
     background-color: black;
-    animation: fadeInAnime2 1s ease 0s 1 normal forwards;
+    animation: loadanime_ue 1s ease 0s 1 normal forwards;
     z-index: 1;
+} #time {
+    position: absolute;
+    left: 50%; transform: translate(-50%, 0px);
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+} #control_center_button {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-size: 20px;
+} 
+
+#control_center {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    width: 240px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    animation: control_open 0.85s ease 0s 1 normal forwards;
+} .control_center_close_anime {
+    animation: control_close 0.85s ease 0s 1 normal forwards !important;
+} #control_center_line1 {
+    position: absolute;
+    margin-top: 15px;
+    left: 52.5px;
+} #control_center_line2 {
+    position: absolute;
+    top: 97.5px;
+    left: 52.5px;
+} #control_center_volume {
+    margin-top: 125px;
+    width: 200px;
 }
+
+#widget {
+    position: absolute;
+    width: 280px;
+    height: 150px;
+    margin-top: 215px;
+    right: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: large;
+    text-align: center;
+    animation: control_open 1s ease 0s 1 normal forwards;
+}
+
 #sita {
     position: absolute;
     bottom: 0px;
@@ -24,8 +78,12 @@ user-select: none;
     height: 40px;
     width: 100%;
     background-color: black;
-    animation: fadeInAnime 1s ease 0s 1 normal forwards;
+    animation: loadanime_sita 1s ease 0s 1 normal forwards;
     z-index: 1
+} .sita_icon {
+    padding: 5px;
+    font-size: 24px;
+    transition: 0.30s;
 }
 
 #hidari {
@@ -38,10 +96,9 @@ user-select: none;
     color: #fff;
     font-size: 20px;
     background-color: rgb(61, 61, 61);
-    animation: fadeInAnime3 1s ease 0s 1 normal forwards;
+    animation: loadanime_hidari 1s ease 0s 1 normal forwards;
     z-index: 0;
-}
-#hidari:hover {
+} #hidari:hover {
     position: absolute;
     bottom: 0px;
     transition: 0.20s;
@@ -51,198 +108,214 @@ user-select: none;
     color: #fff;
     font-size: 25px;
     background-color: rgb(61, 61, 61);
-}
-#hidari_items {
+} #hidari_items {
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
     text-align: center;
+} 
+
+#search {
+    position: absolute;
+    display: none;
+    width: 250px;
+    height: 85%;
+    margin-top: 40px;
+    left: 45px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: menu_open 0.65s ease 0s 1 normal forwards;
+} 
+#all_app {
+    position: absolute;
+    display: none;
+    width: 250px;
+    height: 85%;
+    margin-top: 40px;
+    left: 45px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: menu_open 0.65s ease 0s 1 normal forwards;
+} #all_app_l1 {
+    position: absolute;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+} #all_app_l2 {
+    position: absolute;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+} 
+
+.app_icon {
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.20s;
+    border: 2px solid white;
+} .app_icon:hover {
+    padding: 20px;
+    border-radius: 150px;
+    transition: 0.20s;
+    border: 2px solid white; 
+} .app_icon_name {
+    padding: 5px;
+} 
+
+.all_app_anime {
+    animation: menu_close 0.65s ease 0s 1 normal forwards !important;
 }
-@keyframes fadeInAnime {
+
+/* //bar */ 
+/* bar_animes */ 
+@keyframes loadanime_ue {
     0% {
         transform: translateY(60px);
     } 100% {
         transform: translateY(0px);
     }
 } 
-@keyframes fadeInAnime2 {
+@keyframes loadanime_sita {
     0% {
         transform: translateY(-60px);
     } 100% {
         transform: translateY(0px);
     }
 }
-@keyframes fadeInAnime3 {
+@keyframes loadanime_hidari {
     0% {
         transform: translatex(-60px);
     } 100% {
         transform: translatex(0px);
     }
-} 
-@keyframes fadeInAnime4 {
-    0% {
-        transform: translatex(-295px);
-    } 100% {
-        transform: translatex(0px);
-    }
-} 
-@keyframes fadeInAnime5 {
-    0% {
-        transform: translatex(0px);
-    } 100% {
-        transform: translatex(-295px);
-    }
-} 
-@keyframes fadeInAnime6 {
-    0% {
-        transform: scale(0);
-    } 100% {
-        transform: scale(1);
-    }
-} 
-@keyframes fadeInAnime7 {
-    0% {
-        transform: scale(1);
-    } 100% {
-        transform: scale(0);
-    }
 }
-@keyframes fadeInAnime8 {
-        0% {
-            transform: translateY(-450px) scale(0);
-        } 100% {
-            transform: translateY(0px) scale(1);
-        }
+
+@keyframes control_open {
+    0% {
+        transform: translateY(-450px) scale(0);
+    } 100% {
+        transform: translateY(0px) scale(1);
+    }
 } 
-@keyframes fadeInAnime9 {
+@keyframes control_close {
     0% {
         transform: translateY(0px);
     } 100% {
         transform: translateY(-450px) scale(0);
     }
 } 
-#time {
-    position: absolute;
-    left: 50%; transform: translate(-50%, 0px);
-    text-align: center;
-    font-size: 18px;
-    color: #fff;
+
+@keyframes menu_open {
+    0% {
+        transform: translatex(-295px);
+    } 100% {
+        transform: translatex(0px);
+    }
+} 
+@keyframes menu_close {
+    0% {
+        transform: translatex(0px);
+    } 100% {
+        transform: translatex(-295px);
+    }
 } 
 
-#control_center_button {
-    position: absolute;
-    right: 5px;
-    top: 0px;
-    font-size: 20px;
-} #control_center {
-    display: none;
-    position: absolute;
-    right: 5px;
-    top: 35px;
-    width: 240px;
-    height: 140px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: black;
-    animation: fadeInAnime8 0.85s ease 0s 1 normal forwards;
+/* //bar_animes */ 
+ 
+/* app_header,body */
 
-} .control_center_close_anime {
-    animation: fadeInAnime9 0.85s ease 0s 1 normal forwards !important;
-} #control_center_line1 {
+.app_header {
     position: absolute;
-    margin-top: 15px;
-    left: 52.5px;
-} #control_center_line2 {
-    position: absolute;
-    top: 97.5px;
-    left: 52.5px;
-}
-.app_icon {
-    padding: 15px;
-    border-radius: 50%;
-    transition: 0.20s;
-    border: 2px solid white;
-} 
-
-.sita_icon {
-    padding: 5px;
-    font-size: 24px;
-    transition: 0.30s;
-}
-
-.app_icon:hover {
-    padding: 20px;
-    border-radius: 150px;
-    transition: 0.20s;
-    border: 2px solid white; 
-} #app_icon_spacial {
-    padding: 15px;
-    border-radius: 150px;
-    border: 2px solid white;
-} #control_center_volume {
-    margin-top: 125px;
-    width: 200px;
-}
-.app_icon_name {
-    padding: 5px;
-}
-.app_name {
+    width: 100%;
+    height: 55px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+} .app_name {
     position: absolute;
     left: 50%;
     padding-top: 5px;
     font-size: 32px;
     transform: translate(-50%, 0%);
-}
-.app_return {
+} .app_return {
     position: absolute;
     left: 0px;
     padding-top: 5px;
     padding-left: 10px;
     font-size: 32px;
     cursor: pointer;
-}
-.app_next {
+} .app_next {
     position: absolute;
     margin-left: 50px;
     padding-top: 5px;
     padding-left: 10px;
     font-size: 32px;
     cursor: pointer;
-}
-.app_reload {
+} .app_reload {
     position: absolute;
     margin-left: 95px;
     padding-top: 5px;
     padding-left: 10px;
     font-size: 32px;
     cursor: pointer;
-}
-.app_home {
+} .app_home {
     position: absolute;
     margin-left: 130px;
     padding-top: 5px;
     padding-left: 10px;
     font-size: 32px;
     cursor: pointer;
-}
-.app_close {
+} .app_close {
     position: absolute;
     right: 0px;
     padding-top: 5px;
     padding-right: 20px;
     font-size: 32px;
     cursor: pointer;
-}
-
-.app_size_change {
+} .app_size_change {
     position: absolute;
     right: 0px;
     padding-top: 5px;
     margin-right: 55px;
     font-size: 32px;
     cursor: pointer;
+} 
+
+.app_body {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
+
+.app_close_anime {
+    animation: app_close_anime 0.45s ease 0s 1 normal forwards !important;
+}
+
+.drag-and-drop {
+    position: absolute;
+    z-index: 1000;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+.app_size {
+    width: 100% !important; 
+    height: 100% !important;
+    top: 0px!important; 
+    bottom: 0px!important; 
+    left: 0px!important;
+    border-radius: 0px!important;
+}
+
+/* //app_header,body */
+
+/* apps */
 
 #setting {
     resize: both;
@@ -255,30 +328,12 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 } .setting_tabs {
     position: absolute;
     margin: 10px;
     left: -50%;
 } 
-
-.app_close_anime {
-    animation: fadeInAnime7 0.45s ease 0s 1 normal forwards !important;
-}.app_header {
-    position: absolute;
-    width: 100%;
-    height: 55px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-}
-.app_body {
-    position: absolute;
-    margin-top: 65px;
-    font-size: 20px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
 
 #feedback {
     resize: both;
@@ -291,7 +346,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #music_player {
@@ -305,7 +360,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #addon_store {
@@ -319,9 +374,8 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
-}
-.addon_store_install {
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
+} .addon_store_install {
     position: sticky;
     text-align: center;
     left: 100%;
@@ -329,8 +383,7 @@ user-select: none;
     white-space: nowrap;
     background-color: orange;
     cursor: pointer;
-}
-.addon_store_app {
+} .addon_store_app {
     position: relative;
     width: 90%;
     padding: 10px;
@@ -349,7 +402,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #internet {
@@ -363,7 +416,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #clock {
@@ -378,7 +431,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #cal {
@@ -393,7 +446,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #camera {
@@ -407,7 +460,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #map {
@@ -421,7 +474,7 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
 #filer {
@@ -435,58 +488,46 @@ user-select: none;
     border-radius: 10px;
     background-color: black;
     color: #fff;
-    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
-#search {
-    position: absolute;
-    display: none;
-    width: 250px;
-    height: 85%;
-    margin-top: 40px;
-    left: 45px;
-    border-radius: 10px;
-    background-color: black;
-    color: #fff;
-    animation: fadeInAnime4 0.65s ease 0s 1 normal forwards;
+/* //apps */
+
+/* app_anime */
+
+@keyframes app_open_anime {
+    0% {
+        transform: scale(0);
+    } 100% {
+        transform: scale(1);
+    }
+} 
+@keyframes app_close_anime {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(0);
+    }
 }
 
-#all_app {
-    position: absolute;
-    display: none;
-    width: 250px;
-    height: 85%;
-    margin-top: 40px;
-    left: 45px;
-    border-radius: 10px;
-    background-color: black;
-    color: #fff;
-    animation: fadeInAnime4 0.65s ease 0s 1 normal forwards;
+/* //app_anime */
+
+/* dark_lightmode */
+
+.white {
+    background-color: #fff !important;
+    color: #000 !important;
 }
 
-.all_app_anime {
-    animation: fadeInAnime5 0.65s ease 0s 1 normal forwards !important;
+.black {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: solid 2px #000 !important;
 }
 
-#all_app_l1 {
-    position: absolute;
-    text-align: center;
-    margin-left: 10px;
-    margin-top: 50px;
-}
+/* //dark_lightmode */
 
-#all_app_l2 {
-    position: absolute;
-    text-align: center;
-    margin-left: 150px;
-    margin-top: 50px;
-}
-
-.app_size {
-    width: 100% !important; height: 100% !important;
-    top: 0px!important; bottom: 0px!important; left: 0px!important;
-    border-radius: 0px!important;
-}
+/* clock_body */
 
 #timebelt {
     position: absolute;
@@ -504,6 +545,10 @@ user-select: none;
     top: 300px; left: 50%; transform: translate(-50%, 0%);
     font-size: 200px;
 }
+
+/* //clock_body */
+
+/* cal_body */
 
 #cal_body {
     position: absolute;
@@ -746,40 +791,4 @@ user-select: none;
     cursor: pointer;
 }
 
-.drag-and-drop {
-    position: absolute;
-    z-index: 1000;
-}
-
-.drag {
-    z-index: 1001;
-}
-
-#widget {
-    position: absolute;
-    width: 280px;
-    height: 150px;
-    margin-top: 215px;
-    right: 5px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: large;
-    text-align: center;
-    animation: fadeInAnime8 1s ease 0s 1 normal forwards;
-}
-
-#timer {
-    
-}
-
-.white {
-    background-color: #fff !important;
-    color: #000 !important;
-}
-
-.black {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: solid 2px #000 !important;
-}
+/* cal_body */
