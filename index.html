@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZOS-Canary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="time.js"></script>
+    <script src="script.js"></script>
+    <script src="tab.js"></script>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+
+</head>
+<body background="images/windows.jpg">
+    <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">EZOS</h1>
+<!------------------------->
+<!--        上バー        -->
+<!------------------------->
+    <span class="bar">
+        <span id="ue">
+            <span id="control_changer"><span id="control_center_button" onclick="control_center_show()"><img src="images/open.png" height="24px" width="24px"></span></span>
+            <span id="control_center">
+                <span id="control_center_line1">
+                    <span class="app_icon" onclick="setting_open()"><img src="images/setting.png" height="24px" width="24px"></span>
+                    <span class="app_icon" onclick="notice_change()"><img src="images/bell.png" height="24px" width="24px"></span>
+                    <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png" height="24px" width="24px"></span>
+                </span>
+                <span id="control_center_line2">
+                    <span id="control_center_theme_changer"><span class="app_icon" onclick="theme_change()"><img src="images/dark.png" height="24px" width="24px"></span></span>
+                    <span id="control_center_fullscreen_change"><span class="app_icon" onclick="fullscreen()"><img src="images/fullscreen.png" height="24px" width="24px"></span></span>
+                    <span class="app_icon" onclick="reload()"><img src="images/reload.png" height="24px" width="24px"></span>
+                </span>
+                
+                <span style="font-size: 22px;" onclick="mute_change()">🔊</span>
+                <input type="range" id="control_center_volume" min="0" max="100" step="5">
+            </span>
+            <span id="time" onclick="schedule()"></span>
+        </span>
+<!------------------------->
+<!--       /上バー        -->
+<!--       下バー         -->
+<!------------------------->
+        <span id="sita">
+            <span class="sita_icon" id="sita_icon_internet" onclick="internet_open()"><img src="images/internet.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_music_player" onclick="music_player_open()"><img src="images/musicplayer.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_setting" onclick="setting_open()"><img src="images/setting.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_feedback" onclick="feedback_open()"><img src="images/feedback.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_addon_store" onclick="addon_store_open()"><img src="images/store.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_clock" onclick="clock_open()"><img src="images/clock.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_cal" onclick="cal_open()"><img src="images/cal.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_memo" onclick="memo_open()"><img src="images/memo.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_filer" onclick="filer_open()"><img src="images/file.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_camera" onclick="camera_open()"><img src="images/camera.png" width="24px" height="24px"></span>
+            <span class="sita_icon" id="sita_icon_map" onclick="map_open()"><img src="images/map.png" width="24px" height="24px"></span>
+        </span>
+<!------------------------->
+<!--       /下バー        -->
+<!--       左バー         -->
+<!------------------------->
+        <span id="hidari">
+            <span id="hidari_items">
+            <span id="virtual_window_button" onclick="virtual_window_open()">❑</span>
+            <span id="virtual_window" hidden>
+                デスク 仮想デスク1 仮想デスク2 仮想デスク3 仮想デスク4
+            </span>
+            <span id="all_app_changer"><span id="all_app_button" onclick="all_app_open()">＋</span></span>
+            <span id="search_changer"><span id="search_button" onclick="search_open()">🔍</span></span>
+            </span>
+        </span>
+    </span>
+<!------------------------->
+<!--       /左バー        -->
+<!--     ウィジェット      -->
+<!------------------------->
+    <span id="widget">
+        EZOS
+        <br>Demo Version
+    </span>
+<!------------------------->
+<!--     /ウィジェット     -->
+<!--     アプリセンター    -->
+<!------------------------->
+<span id="all_app">        
+    <span id="all_app_l1">
+        <span class="app_icon" onclick="internet_open()"><img src="images/internet.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">インターネット</p>
+        <span class="app_icon" onclick="music_player_open()"><img src="images/musicplayer.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">ミュージックプレーヤー</p>
+        <span class="app_icon" onclick="setting_open()"><img src="images/setting.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">設定</p>
+        <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">フィードバック</p>
+        <span class="app_icon" onclick="addon_store_open()"><img src="images/store.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">アドオンストア</p>
+        <span class="app_icon" onclick="clock_open()"><img src="images/clock.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">時計</p>
+    </span>
+    <span id="all_app_l2">
+        <span class="app_icon" onclick="cal_open()"><img src="images/cal.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">電卓</p>
+        <span class="app_icon" onclick="memo_open()"><img src="images/memo.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">メモ帳</p>
+        <span class="app_icon" onclick="filer_open()"><img src="images/file.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">ファイラー</p>
+        <span class="app_icon" onclick="camera_open()"><img src="images/camera.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">カメラ</p>
+        <span class="app_icon" onclick="map_open()"><img src="images/map.png" height="24px" width="24px"></span>
+        <p class="app_icon_name">地図</p>
+    </span>
+</span>
+
+<span id="search">
+    <input type="search" placeholder="アプリ、サイトをここで検索" style="width: 250px; border-radius: 10px; height: 30px; font-size: large;">
+    <p style="text-align: center; font-size: large;">検索履歴</p>
+    <p style="text-align: center; font-size: large;">ToDoリスト</p>
+</span>
+
+    <span id="internet" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">インターネット</span>
+            <span class="app_return" onclick="page_return()">←</span>
+            <span class="app_next" onclick="page_next()">→</span>
+            <span class="app_reload" onclick="page_reload()">↺</span>
+            <span class="app_home" onclick="page_home()">⌂</span>
+            <span class="app_close" onclick="internet_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="internet_size_changer"><span class="app_size_change" onclick="internet_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <iframe src="https://www.bing.com/" width="100%" height="100%" style="margin-top: 55px;">
+    </iframe>
+    </span>
+
+    <span id="setting" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">設定</span>
+            <span class="app_return" onclick="page_return()">←</span>
+            <span class="app_close" onclick="setting_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="setting_size_changer"><span class="app_size_change" onclick="setting_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            <span id="setting_system" class="setting_tabs">💻 システム</span>
+                <span>通知</span>
+                <span>バージョン</span>
+                <span></span>
+            <br>
+            <span id="setting_theme" class="setting_tabs">🖌️ 個人用設定</span>
+                <span id="theme_button" onclick="theme()">テーマ</span>
+                    <span id="theme">
+                        ダークテーマ / ライトテーマ
+                        他のテーマをアドオンストアで入手
+                    </span>
+
+                <span>背景</span>
+                <span>色</span>
+                <span>フォント</span>
+        </span></span>
+
+    <span id="feedback" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">フィードバック</span>
+            <span class="app_close" onclick="feedback_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="feedback_size_changer"><span class="app_size_change" onclick="feedback_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            ✉メール✉:officialezos☆gmail(comma)com
+            🐤X(Twitter)🐤:☆EZOSOfficial
+            ※☆は@ (comma)は. にそれぞれ変換してください。
+        </span>
+    </span>
+            
+    <span id="music_player" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">ミュージックプレイヤー</span>
+            <span class="app_close" onclick="music_player_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="music_player_size_changer"><span class="app_size_change" onclick="music_player_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+                <form name="myform">
+                    <input id="myfile" type="file">
+                    <div id="music_p"></div>
+                    <div id="video_p"></div>
+                </form>
+          
+                <script>
+          var obj = document.getElementById("myfile");
+          
+          obj.addEventListener("change", function(evt){
+            var file = evt.target.files;
+            var reader = new FileReader();
+            
+            //dataURL形式でファイルを読み込む
+            reader.readAsDataURL(file[0]);
+            
+            //ファイルの読込が終了した時の処理
+            reader.onload = function(){
+              var dataUrl = reader.result;
+            
+            if (dataUrl.indexOf('mp3') != -1 || dataUrl.indexOf('wav') != -1 || dataUrl.indexOf('ogg') != -1 || dataUrl.indexOf('m4a') != -1 || dataUrl.indexOf('aac') != -1) {
+                document.getElementById("music_p").innerHTML = "<audio id='music' src='" + dataUrl + "' name='output'></audio>";
+            }
+            if (dataUrl.indexOf('mp4') != -1 || dataUrl.indexOf('ogv') != -1 || dataUrl.indexOf('webm') != -1) {
+                document.getElementById("video_p").innerHTML = "<video id='video' src='" + dataUrl + "' name='output' width='800px' height='500px'></video>";
+            }
+           }
+          },false);
+            </script>
+            <button onclick="console.log(getElementById('music').currentTime)">now^^</button>
+            <button onclick="console.log(getElementById('music').duration)">au^^?</button>
+            <script>
+            </script>
+            <span id="music_previous">⏮️</span>
+            <span id="pause_play_changer"><span id="music_start" onclick="play()">▶️</span></span>
+            <span id="music_reset" onclick="getElementById('music').pause()">⏹️</span>
+            <span id="music_next">⏭️</span>
+            <span id="music_ramdom">×🔀×</span>
+            <span id="loop_changer"><span id="music_loop" onclick="onloop()">×🔁×</span></span>
+            <span id="music_volume"><input type="range" id="control_center_volume" min="0" max="100" step="5"></span> 
+            </p>
+        </span>
+    </span>
+
+    <span id="clock" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">時計</span>
+            <span class="app_close" onclick="clock_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="clock_size_changer"><span class="app_size_change" onclick="clock_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            <span id="currenttime">時計</span>
+            <span id="timer">タイマー</span>
+            <br>カウントアップ カウントダウン +1h +1m +1s
+            <span id="stopwatch">ストップウォッチ</span>
+            <span id="timebelt">現在時刻</span>
+            <br>
+            <span id="ymdtime"></span>
+            <br>
+            <span id="hmstime"></span>
+        </span>
+    </span>
+
+    <span id="cal" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">電卓</span>
+            <span class="app_close" onclick="cal_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="cal_size_changer"><span class="app_size_change" onclick="cal_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            <span id="cal_body">
+                <input value="" id="screen" placeholder="0"><br>
+                <div id="calc_button">
+                    <div id="line1">
+                        <button id="del" onclick="del()">C</button> 
+                        <button id="p_m" onclick="p_m()">±</button>
+                        <button id="pow" onclick="pw()">^</button>
+                        <button id="div" onclick="div()">÷</button><br>
+                    </div>
+                    <div id="line2">
+                        <button id="sev" onclick="sev()">7</button>
+                        <button id="eig" onclick="eig()">8</button>
+                        <button id="nin" onclick="nin()">9</button>
+                        <button id="mul" onclick="mul()">×</button><br>
+                    </div>
+                    <div id="line3">
+                       <button id="fou" onclick="fou()">4</button>
+                       <button id="fiv" onclick="fiv()">5</button>
+                       <button id="six" onclick="six()">6</button>
+                       <button id="sub" onclick="sub()">-</button><br>
+                    </div>
+                    <div id="line4">
+                        <button id="one" onclick="one()">1</button>
+                        <button id="two" onclick="two()">2</button>
+                        <button id="thr" onclick="thr()">3</button>
+                        <button id="add" onclick="add()">+</button><br>
+                    </div>
+                    <div id="line5">
+                        <button id="zer" onclick="zer()">0</button>
+                        <button id="com" onclick="com()">.</button>
+                        <button id="equ" onclick="equ()">=</button>
+                    </div>
+                </div>
+            </span>
+        </span>
+    </span>
+
+    <span id="addon_store" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">アドオンストア</span>
+            <span id="addon_store_size_changer"><span class="app_size_change" onclick="addon_store_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+            <span class="app_close" onclick="addon_store_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+        </span>
+        <span class="app_body">
+            <span id="store_app">アプリ</span>
+            <br><div class="addon_store_app" onclick="bscw_dl()">アプリメーカー<div class="addon_store_install" onclick="">インストール</div></div>
+
+            <br><div class="addon_store_app" onclick="bscw_dl()">Browser Studio Code <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ Canary <div class="addon_store_install" onclick="bscw_canary_dl()">インストール</div>
+            <br>└ Dev <div class="addon_store_install" onclick="bscw_dev_dl()">インストール</div>
+            <br>└ Preview <div class="addon_store_install" onclick="bscw_preview_dl()">インストール</div></div>
+            <br><span id="store_theme">テーマ</span>
+            <br><div class="addon_store_app" onclick="">Windows風 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 壁紙 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ アプリ系 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 設定系 <div class="addon_store_install" onclick="">インストール</div></div>
+            <br><div class="addon_store_app" onclick="">Mac風 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 壁紙 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ アプリ系 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 設定系 <div class="addon_store_install" onclick="">インストール</div></div>
+            <br><div class="addon_store_app" onclick="">Ubuntu風(Linux風) <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 壁紙 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ アプリ系 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 設定系 <div class="addon_store_install" onclick="">インストール</div></div>
+            <br><span id="store_addon">アドオン</span>
+            <br>言語パッチ 英語
+            
+        </span>
+    </span>
+
+    <span id="camera" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">カメラ</span>
+            <span class="app_close" onclick="camera_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="camera_size_changer"><span class="app_size_change" onclick="camera_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            <video id="camera_vid" width="300" height="200"></video>
+<canvas id="picture" width="300" height="200"></canvas>
+<form>
+  <button type="button" id="shutter">シャッター</button>
+</form>
+
+<audio id="se" preload="auto">
+  <source src="camera-shutter1.mp3" type="audio/mp3">
+</audio>
+
+<script>
+window.onload = () => {
+  const video  = document.querySelector("#camera_vid");
+  const canvas = document.querySelector("#picture");
+  const se     = document.querySelector('#se');
+
+  /** カメラ設定 */
+  const constraints = {
+    audio: false,
+    video: {
+      width: 300,
+      height: 200,
+      //facingMode: "user"   // フロントカメラを利用する
+      facingMode: { exact: "environment" }  // リアカメラを利用する場合
+    }
+  };
+
+  /**
+   * カメラを<video>と同期
+   */
+  navigator.mediaDevices.getUserMedia(constraints)
+  .then( (stream) => {
+    video.srcObject = stream;
+    video.onloadedmetadata = (e) => {
+      video.play();
+    };
+  })
+  .catch( (err) => {
+    console.log(err.name + ": " + err.message);
+  });
+
+  /**
+   * シャッターボタン
+   */
+   document.querySelector("#shutter").addEventListener("click", () => {
+    const ctx = canvas.getContext("2d");
+
+    // 演出的な目的で一度映像を止めてSEを再生する
+    video.pause();  // 映像を停止
+    se.play();      // シャッター音
+    setTimeout( () => {
+      video.play();    // 0.5秒後にカメラ再開
+    }, 500);
+
+    // canvasに画像を貼り付ける
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  });
+};
+</script>
+        </span>
+    </span>
+
+    <span id="map" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">マップ</span>
+            <span class="app_close" onclick="map_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="map_size_changer"><span class="app_size_change" onclick="map_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d17053.552941174567!2d135.9605552884475!3d34.514998461010364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x6006b6a045bc04f7%3A0x7695c4a039b70f72!2z5qab5Y6f5bGx6Lev!3m2!1d34.5004175!2d135.9622343!4m5!1s0x6006b460a3913c27%3A0xa63ae73bca1d453e!2z5a6H6ZmA5biC56uL5qab5Y6f5Lit5a2m5qCh!3m2!1d34.53344!2d135.961588!5e0!3m2!1sja!2sjp!4v1696637631054!5m2!1sja!2sjp" width="100%" height="100%" style="margin-top: 55px;"></iframe>
+    </span>
+
+    <span id="filer" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">ファイラー</span>
+            <span class="app_close" onclick="filer_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="filer_size_changer"><span class="app_size_change" onclick="filer_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+        </span>
+        <span class="app_body">
+            デスクトップ
+            ダウンロード
+            テキスト
+            ミュージック
+            ピクチャ
+            ムービー
+            <source>
+                <form name="my">
+                    <input id="m" type="file">
+                    <div id="bgs"></div>
+                </form>
+          
+                <script>
+          var obj2 = document.getElementById("m");
+          
+          obj2.addEventListener("change", function(evt){
+            var file2 = evt.target.files;
+            var reader2 = new FileReader();
+            
+            //dataURL形式でファイルを読み込む
+            reader2.readAsDataURL(file2[0]);
+            
+            //ファイルの読込が終了した時の処理
+            reader2.onload = function(){
+              var dataUrl = reader2.result;
+          
+              //読み込んだ画像とdataURLを書き出す
+              document.getElementById("bgs").innerHTML = "<video id='vid' src='" + dataUrl + "' name='output' controls width='700px' height='500px'></video>";
+            }
+          },false);
+            </script>
+        </span>
+    </span>
+
+    <span id="memo" class="drag-and-drop">
+        <span class="app_header">
+            <span class="app_name">メモ帳</span>
+            <span class="app_close" onclick="memo_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="memo_size_changer"><span class="app_size_change" onclick="memo_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+            ファイル
+            <details>
+            <br>読み込み 
+            <br>上書き保存 
+            <br>名前を付けて保存
+            </details>
+            設定
+            <details>
+            <br>行
+            <br>文字
+            <br>背景  
+            </details>
+        </span>
+        <textarea name="" id="" style="width: 100%; height: 100%; margin-top: 55px;"></textarea>
+    </span>
+
+    <span id="mytube" class="drag-and-drop" hidden>
+        <span class="app_header">
+            <span class="app_name">MyTube</span>
+            <span class="app_close" onclick="mytube_close()"><img src="images/batu.png" height="24px" width="24px"></span>
+            <span id="mytube_size_changer"><span class="app_size_change" onclick="mytube_size_change()"><img src="images/kakudai.png" height="24px" width="24px"></span></span>
+            ファイル
+            <details>
+            <br>読み込み 
+            <br>上書き保存 
+            <br>名前を付けて保存
+            </details>
+            設定
+            <details>
+            <br>行
+            <br>文字
+            <br>背景  
+            </details>
+        </span>
+        <textarea name="" id="" style="width: 100%; height: 100%; margin-top: 55px;"></textarea>
+    </span>
+
+
+    <span id="bscode" hidden>
+        <span class="app_header">
+            <span class="app_name">Browser Studio Code</span>
+            <span class="app_close" onclick="filer_close()">☓</span>
+            <span id="filer_size_changer"><span class="app_size_change" onclick="filer_size_change()">☐</span></span>
+        </span>
+        <span class="app_body">
+            ファイル
+        </span>
+
+    <script src="tab.js"></script>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+</span>
+</body>
+</html>

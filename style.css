@@ -1,0 +1,785 @@
+body {
+    font-family: Yu Gothic UI Semilight;
+    
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+#ue {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    animation: fadeInAnime2 1s ease 0s 1 normal forwards;
+    z-index: 1;
+}
+#sita {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    animation: fadeInAnime 1s ease 0s 1 normal forwards;
+    z-index: 1
+}
+
+#hidari {
+    position: absolute;
+    bottom: 0px;
+    transition: 0.20s;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(61, 61, 61);
+    animation: fadeInAnime3 1s ease 0s 1 normal forwards;
+    z-index: 0;
+}
+#hidari:hover {
+    position: absolute;
+    bottom: 0px;
+    transition: 0.20s;
+    left: 0px;
+    height: 100%;
+    width: 35px;
+    color: #fff;
+    font-size: 25px;
+    background-color: rgb(61, 61, 61);
+}
+#hidari_items {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: center;
+}
+@keyframes fadeInAnime {
+    0% {
+        transform: translateY(60px);
+    } 100% {
+        transform: translateY(0px);
+    }
+} 
+@keyframes fadeInAnime2 {
+    0% {
+        transform: translateY(-60px);
+    } 100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInAnime3 {
+    0% {
+        transform: translatex(-60px);
+    } 100% {
+        transform: translatex(0px);
+    }
+} 
+@keyframes fadeInAnime4 {
+    0% {
+        transform: translatex(-295px);
+    } 100% {
+        transform: translatex(0px);
+    }
+} 
+@keyframes fadeInAnime5 {
+    0% {
+        transform: translatex(0px);
+    } 100% {
+        transform: translatex(-295px);
+    }
+} 
+@keyframes fadeInAnime6 {
+    0% {
+        transform: scale(0);
+    } 100% {
+        transform: scale(1);
+    }
+} 
+@keyframes fadeInAnime7 {
+    0% {
+        transform: scale(1);
+    } 100% {
+        transform: scale(0);
+    }
+}
+@keyframes fadeInAnime8 {
+        0% {
+            transform: translateY(-450px) scale(0);
+        } 100% {
+            transform: translateY(0px) scale(1);
+        }
+} 
+@keyframes fadeInAnime9 {
+    0% {
+        transform: translateY(0px);
+    } 100% {
+        transform: translateY(-450px) scale(0);
+    }
+} 
+#time {
+    position: absolute;
+    left: 50%; transform: translate(-50%, 0px);
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+} 
+
+#control_center_button {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-size: 20px;
+} #control_center {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    width: 240px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    animation: fadeInAnime8 0.85s ease 0s 1 normal forwards;
+
+} .control_center_close_anime {
+    animation: fadeInAnime9 0.85s ease 0s 1 normal forwards !important;
+} #control_center_line1 {
+    position: absolute;
+    margin-top: 15px;
+    left: 52.5px;
+} #control_center_line2 {
+    position: absolute;
+    top: 97.5px;
+    left: 52.5px;
+}
+.app_icon {
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.20s;
+    border: 2px solid white;
+} 
+
+.sita_icon {
+    padding: 5px;
+    font-size: 24px;
+    transition: 0.30s;
+}
+
+.app_icon:hover {
+    padding: 20px;
+    border-radius: 150px;
+    transition: 0.20s;
+    border: 2px solid white; 
+} #app_icon_spacial {
+    padding: 15px;
+    border-radius: 150px;
+    border: 2px solid white;
+} #control_center_volume {
+    margin-top: 125px;
+    width: 200px;
+}
+.app_icon_name {
+    padding: 5px;
+}
+.app_name {
+    position: absolute;
+    left: 50%;
+    padding-top: 5px;
+    font-size: 32px;
+    transform: translate(-50%, 0%);
+}
+.app_return {
+    position: absolute;
+    left: 0px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.app_next {
+    position: absolute;
+    margin-left: 50px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.app_reload {
+    position: absolute;
+    margin-left: 95px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.app_home {
+    position: absolute;
+    margin-left: 130px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.app_close {
+    position: absolute;
+    right: 0px;
+    padding-top: 5px;
+    padding-right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.app_size_change {
+    position: absolute;
+    right: 0px;
+    padding-top: 5px;
+    margin-right: 55px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#setting {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+} .setting_tabs {
+    position: absolute;
+    margin: 10px;
+    left: -50%;
+} 
+
+.app_close_anime {
+    animation: fadeInAnime7 0.45s ease 0s 1 normal forwards !important;
+}.app_header {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.app_body {
+    position: absolute;
+    margin-top: 65px;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#feedback {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#music_player {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#addon_store {
+    position: fixed;
+    resize: both;
+    overflow: auto;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+.addon_store_install {
+    position: sticky;
+    text-align: center;
+    left: 100%;
+    padding: 10px;
+    white-space: nowrap;
+    background-color: orange;
+    cursor: pointer;
+}
+.addon_store_app {
+    position: relative;
+    width: 90%;
+    padding: 10px;
+    white-space: nowrap;
+    border: solid 1px white;
+}
+
+#memo {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#internet {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#clock {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    overflow: auto;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#cal {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    overflow: auto;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#camera {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#map {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#filer {
+    resize: both;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime6 0.45s ease 0s 1 normal forwards;
+}
+
+#search {
+    position: absolute;
+    display: none;
+    width: 250px;
+    height: 85%;
+    margin-top: 40px;
+    left: 45px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime4 0.65s ease 0s 1 normal forwards;
+}
+
+#all_app {
+    position: absolute;
+    display: none;
+    width: 250px;
+    height: 85%;
+    margin-top: 40px;
+    left: 45px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    animation: fadeInAnime4 0.65s ease 0s 1 normal forwards;
+}
+
+.all_app_anime {
+    animation: fadeInAnime5 0.65s ease 0s 1 normal forwards !important;
+}
+
+#all_app_l1 {
+    position: absolute;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+#all_app_l2 {
+    position: absolute;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.app_size {
+    width: 100% !important; height: 100% !important;
+    top: 0px!important; bottom: 0px!important; left: 0px!important;
+    border-radius: 0px!important;
+}
+
+#timebelt {
+    position: absolute;
+    white-space: nowrap;
+    top: 15px; left: 50%; transform: translate(-50%, 0%);
+    font-size: 75px;
+}
+#ymdtime {
+    position: absolute;
+    top: 150px; left: 50%; transform: translate(-50%, 0%);
+    font-size: 100px;
+}   
+#hmstime {
+    position: absolute;
+    top: 300px; left: 50%; transform: translate(-50%, 0%);
+    font-size: 200px;
+}
+
+#cal_body {
+    position: absolute;
+    white-space: nowrap;
+    top: 100px; left: 50%; transform: translate(-50%, 0%);
+    font-size: x-large;
+}
+
+#screen {
+    position: absolute;
+    left: 50%; transform: translate(-50%, -50%);
+    width: 115%;
+    height: 50px;
+    color: black;
+    border-radius: 2.5px;
+    background-color: rgb(205, 205, 205);
+    border: solid 0px;
+    font-size:xx-large;
+    outline: solid 0px;
+    text-align: right;
+}
+#calc_button{
+    margin-top: 10px;
+}
+#line1 {
+    padding: 0px 0px 5px;
+}
+#line2 {
+    padding: 0px 0px 5px;
+}
+#line3 {
+    padding: 0px 0px 5px;
+}
+#line4 {
+    padding: 0px 0px 5px;
+}
+#line5 {
+    padding: 0px 0px 5px;
+}
+#del {
+    width: 75px;
+    height: 75px;
+    color: white;
+    border-radius: 7.5px;
+    background-color: rgb(250, 90, 90);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#p_m {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#pow {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#div {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#sev {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#eig {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#nin {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#mul {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#fou {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#fiv {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#six {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#sub {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#one {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#two {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#thr {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#add {
+    position: absolute;
+    right: 0px;
+    width: 75px;
+    height: 155px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#zer {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#zer2 {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#com {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(215, 215, 215);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+#equ {
+    width: 75px;
+    height: 75px;
+    color: black;
+    border-radius: 7.5px;
+    background-color: rgb(170, 170, 170);
+    border: solid 0px;
+    font-size:xx-large;
+    cursor: pointer;
+}
+
+.drag-and-drop {
+    position: absolute;
+    z-index: 1000;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+#widget {
+    position: absolute;
+    width: 280px;
+    height: 150px;
+    margin-top: 215px;
+    right: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: large;
+    text-align: center;
+    animation: fadeInAnime8 1s ease 0s 1 normal forwards;
+}
+
+#timer {
+    
+}
+
+.white {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.black {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: solid 2px #000 !important;
+}
