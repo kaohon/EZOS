@@ -184,7 +184,7 @@
             <button onclick="console.log(getElementById('music').duration)">au^^?</button>
             <span id="music_previous">⏮️</span>
             <span id="pause_play_changer"><span id="music_start" onclick="play()">▶️</span></span>
-            <span id="music_reset" onclick="getElementById('music').pause()">⏹️</span>
+            <span id="music_reset" onclick="pause()">⏹️</span>
             <span id="music_next">⏭️</span>
             <span id="music_ramdom">×🔀×</span>
             <span id="loop_changer"><span id="music_loop" onclick="onloop()">×🔁×</span></span>
@@ -200,15 +200,16 @@
             <span id="clock_size"><span class="app_size_change" onclick="clock_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
-            <span id="currenttime">時計</span>
-            <span id="timer">タイマー</span>
-            <br>カウントアップ カウントダウン +1h +1m +1s
+            <span id="currenttime" onclick="currenttime()">時計</span>
+            <span id="timer" onclick="timer()">タイマー</span>
+                <span id="clock_change">
+                    <span id="timebelt">現在時刻</span>
+                    <br>
+                    <span id="ymdtime"></span>
+                    <br>
+                    <span id="hmstime"></span>
+                </span>
             <span id="stopwatch">ストップウォッチ</span>
-            <span id="timebelt">現在時刻</span>
-            <br>
-            <span id="ymdtime"></span>
-            <br>
-            <span id="hmstime"></span>
         </span>
     </span>
 
@@ -295,8 +296,8 @@
             <span id="camera_size"><span class="app_size_change" onclick="camera_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
-            <video id="camera_vid" width="300" height="200"></video>
-            <canvas id="picture" width="300" height="200"></canvas>
+            <video id="camera_vid" width="100%" height="100%"></video>
+            <canvas id="picture" width="100%" height="100%"></canvas>
         <form>
             <button type="button" id="shutter">シャッター</button>
         </form>
@@ -354,7 +355,7 @@
             <br>背景  
             </details>
         </span>
-        <textarea name="" id="" style="width: 100%; height: 100%; margin-top: 55px;"></textarea>
+        <textarea name="" id="bscode_area" style="width: 100%; height: 100%; margin-top: 55px;" autocomplete="on"></textarea>
     </span>
 
     <span id="mytube" class="drag-and-drop" hidden>
@@ -391,6 +392,8 @@
 <!------------------------->
 <!--     /アプリ          -->
 <!------------------------->
+</span>
+    <script src="autocomp.js"></script>
     <script src="tab.js"></script>
     <script src="time.js"></script>
     <script src="script.js"></script>
@@ -398,6 +401,5 @@
     <script src="file.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
-</span>
 </body>
 </html>
