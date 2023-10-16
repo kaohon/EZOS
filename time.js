@@ -1,3 +1,21 @@
+var countdown = function(){
+    alert("終了しました");
+}
+x = 0;
+function hour1() {
+    y = x + 600000;
+}
+
+function minute1() {
+    y = x + 60000;
+}
+
+function second1() {
+    y = x + 1000;
+}
+
+setTimeout(countdown, y);
+
 var time;
 
 function showTime(){
