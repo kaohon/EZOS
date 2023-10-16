@@ -14,12 +14,12 @@
 <!------------------------->
     <span class="bar">
         <span id="ue">
-            <span id="control_changer"><span id="control_center_button" onclick="control_center_show()"><img src="images/open.png"></span></span>
+            <span id="control_changer"><span id="control_center_button" onclick="control_center_show()"><img src="images/open.png" alt="⬇️"></span></span>
             <span id="control_center">
                 <span id="control_center_line1">
-                    <span class="app_icon" onclick="setting_open()"><img src="images/setting.png"></span>
-                    <span class="app_icon" onclick="notice_change()"><img src="images/bell.png"></span>
-                    <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png"></span>
+                    <span class="app_icon" onclick="setting_open()"><img src="images/setting.png" alt="⚙️"></span>
+                    <span class="app_icon" onclick="notice_change()"><img src="images/bell.png" alt="🔔"></span>
+                    <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png" alt="💬"></span>
                 </span>
                 <span id="control_center_line2">
                     <span id="theme_changer"><span class="app_icon" onclick="theme_change()"><img src="images/dark.png"></span></span>
@@ -209,7 +209,7 @@
                     <br>
                     <span id="hmstime"></span>
                 </span>
-            <span id="stopwatch">ストップウォッチ</span>
+            <span id="stopwatch">ストップウォッチ</span><span id='gentime'></span>
         </span>
     </span>
 
@@ -384,7 +384,7 @@
         <span class="app_header">
             <span class="app_name">Browser Studio Code</span>
             <span class="app_close" onclick="filer_close()">☓</span>
-            <span id="filer_size"><span class="app_size_change" onclick="filer_size()">☐</span></span>
+            <span id="bscode_size"><span class="app_size_change" onclick="filer_size()">☐</span></span>
         </span>
         <span class="app_body">
             ファイル
@@ -393,13 +393,13 @@
 <!--     /アプリ          -->
 <!------------------------->
 </span>
-    <script src="autocomp.js"></script>
-    <script src="tab.js"></script>
-    <script src="time.js"></script>
-    <script src="script.js"></script>
-    <script src="camera.js"></script>
-    <script src="file.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script><script src="autocomp.js"></script>
+        <script src="tab.js"></script>
+        <script src="time.js"></script>
+        <script src="timer.js"></script>
+        <script src="script.js"></script>
+        <script src="camera.js"></script>
+        <script src="file.js"></script>
 </body>
 </html>

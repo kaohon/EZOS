@@ -392,6 +392,6 @@ function currenttime() {
 }
 
 function timer() {
-  document.getElementById("clock_change").innerHTML = "カウントアップ カウントダウン <span onclick='hour1()'>+1h</span> <span onclick='minute1()'>+1m</span> <span onclick='second1()'>+1s</span>"
+  document.getElementById("clock_change").innerHTML = "カウントアップ <span onclick='down()'>カウントダウン</span> <span onclick='hour1()'>+1h</span> <span onclick='minute1()'>+1m</span> <span onclick='second1()'>+1s</span>"
 }
 // //clock_script
