@@ -15,6 +15,7 @@ body {
     height: 30px;
     width: 100%;
     background-color: black;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     animation: loadanime_ue 1s ease 0s 1 normal forwards;
     z-index: 1;
 } #time {
@@ -43,6 +44,7 @@ body {
     border-radius: 10px;
     text-align: center;
     background-color: black;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: control_open 0.85s ease 0s 1 normal forwards;
 } .control_center_close_anime {
     animation: control_close 0.85s ease 0s 1 normal forwards !important;
@@ -70,6 +72,7 @@ body {
     color: white;
     font-size: large;
     text-align: center;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: control_open 1s ease 0s 1 normal forwards;
 }
 
@@ -80,6 +83,7 @@ body {
     height: 40px;
     width: 100%;
     background-color: black;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     animation: loadanime_sita 1s ease 0s 1 normal forwards;
     z-index: 1
 } .sita_icon {
@@ -93,6 +97,7 @@ body {
 }
 
 #hidari {
+    box-sizing: border-box;
     position: absolute;
     bottom: 0px;
     transition: 0.20s;
@@ -102,6 +107,7 @@ body {
     color: #fff;
     font-size: 20px;
     background-color: rgb(61, 61, 61);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     animation: loadanime_hidari 1s ease 0s 1 normal forwards;
     z-index: 0;
 } #hidari:hover {
@@ -131,6 +137,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: menu_open 0.60s ease 0s 1 normal forwards;
 } 
 #all_app {
@@ -143,6 +150,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: menu_open 0.60s ease 0s 1 normal forwards;
 } #all_app_l1 {
     position: absolute;
@@ -338,6 +346,7 @@ body {
 /* apps */
 
 #setting {
+    box-sizing: border-box;
     resize: both;
     overflow: auto;
     position: absolute;
@@ -348,6 +357,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 } .setting_tabs {
     position: absolute;
@@ -366,6 +376,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -380,6 +391,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -394,6 +406,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 } .addon_store_install {
     position: sticky;
@@ -422,6 +435,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -436,6 +450,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -451,6 +466,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -466,6 +482,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -480,6 +497,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -494,6 +512,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
@@ -508,6 +527,7 @@ body {
     border-radius: 10px;
     background-color: black;
     color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
