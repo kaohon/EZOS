@@ -385,3 +385,13 @@ function offloop() {
   document.getElementById("loop_changer").innerHTML = '<span id="music_loop" onclick="onloop()">×🔁×</span>'
 }
 // //musicplayer_script
+
+// clock_script
+function currenttime() {
+  document.getElementById("clock_change").innerHTML = "<span id='timebelt'>現在時刻</span><br><span id='ymdtime'></span><br><span id='hmstime'></span>"
+}
+
+function timer() {
+  document.getElementById("clock_change").innerHTML = "カウントアップ カウントダウン <span onclick='hour1()'>+1h</span> <span onclick='minute1()'>+1m</span> <span onclick='second1()'>+1s</span>"
+}
+// //clock_script
