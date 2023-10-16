@@ -168,11 +168,8 @@ body {
     border-radius: 150px;
     transition: 0.20s;
     border: 2px solid white; 
-} .app_icon:hover img {
-    height: 28px;
-    width: 28px;
-}
- .app_icon_name {
+} 
+.app_icon_name {
     padding: 5px;
 } 
 
