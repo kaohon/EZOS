@@ -24,7 +24,24 @@ body {
     text-align: center;
     font-size: 18px;
     color: #fff;
-} #control_center_button {
+} #schedule {
+    box-sizing: border-box;
+    overflow: auto;
+    position: absolute;
+    display: none;
+    top: 40px;
+    left: 50%;
+    width: 15%;
+    height: 25%;
+    transition: 0.30s;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    animation: 0.45s ease 0s 1 normal forwards;transform: translate(-50%, 0px);
+}  
+
+#control_center_button {
     position: absolute;
     right: 5px;
     top: 0px;
@@ -91,9 +108,13 @@ body {
     transition: 0.30s;
 } .sita_icon img {
     transform: translate(0%, 25%);
-        top: -50%;
+    top: -50%;
     width: 24px;
     height: 24px;
+} .sita_icon img:hover{
+    width: 28px;
+    height: 28px;
+    transition: 0.30s;
 }
 
 #hidari {
@@ -524,7 +545,7 @@ body {
     0% {
         transform: scale(0);
     } 100% {
-        transform: scale(1);
+        transform: scale(1); 
     }
 } 
 @keyframes app_close_anime {
@@ -551,6 +572,34 @@ body {
 }
 
 /* //dark_lightmode */
+
+/* clock_header */
+    #currenttime {
+        padding-top: 15px;
+        margin-left: 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    #timer {
+        padding-top: 15px;
+        margin-left: 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    #stopwatch {
+        padding-top: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    #select {
+        position: absolute;
+        margin-left: 5px;
+        top: 5px;
+        padding-top: 5px;
+        height: 40px;
+        border-radius: 5px;
+        border: solid 2px #fff;
+    }
+/* //clock_header */
 
 /* clock_body */
 

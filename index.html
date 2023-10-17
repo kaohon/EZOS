@@ -29,7 +29,11 @@
                 <span style="font-size: 22px;" onclick="mute_change()">🔊</span>
                 <input type="range" id="volume" min="0" max="100" step="5">
             </span>
-            <span id="time" onclick="schedule()"></span>
+            <span id="time" onclick="schedule()">
+            </span>
+        </span>
+        <span id="schedule">
+            
         </span>
 <!------------------------->
 <!--       /上バー        -->
@@ -137,13 +141,15 @@
         <span class="app_body">
             <span id="setting_system" class="setting_tabs">💻 システム</span>
                 <span>通知</span>
-                <span>バージョン</span>
+                <span onclick="ver()">バージョン</span>
+                    <span>バージョン:   <br>最新バージョン:    <br>最新開発中バージョン:</span>
                 <span></span>
             <br>
             <span id="setting_theme" class="setting_tabs">🖌️ 個人用設定</span>
                 <span id="theme_button" onclick="theme()">テーマ</span>
                     <span id="theme">
                         ダークテーマ / ライトテーマ
+                        ライティングシャドウ
                         他のテーマをアドオンストアで入手
                     </span>
 
@@ -192,21 +198,23 @@
 
     <span id="clock" class="drag-and-drop">
         <span class="app_header">
+            <span id="select">
+                <span id="currenttime" onclick="currenttime()"><img src="images/clock.png"></span>
+                <span id="timer" onclick="timer()"><img src="images/timer.png"></span>
+                <span id="stopwatch"><img src="images/stopwatch.png"></span><span id='gentime'></span>
+            </span>
             <span class="app_name">時計</span>
             <span class="app_close" onclick="clock_close()"><img src="images/batu.png"></span>
             <span id="clock_size"><span class="app_size_change" onclick="clock_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
-            <span id="currenttime" onclick="currenttime()">時計</span>
-            <span id="timer" onclick="timer()">タイマー</span>
                 <span id="clock_change">
                     <span id="timebelt">現在時刻</span>
                     <br>
                     <span id="ymdtime"></span>
                     <br>
                     <span id="hmstime"></span>
-                </span>
-            <span id="stopwatch">ストップウォッチ</span><span id='gentime'></span>
+            </span>
         </span>
     </span>
 
@@ -268,6 +276,14 @@
             <br>└ Dev <div class="addon_store_install" onclick="bscw_dev_dl()">インストール</div>
             <br>└ Preview <div class="addon_store_install" onclick="bscw_preview_dl()">インストール</div></div>
             <br><span id="store_theme">テーマ</span>
+            <br><div class="addon_store_app" onclick="">ライティングシャドウ
+            <br>└ 赤色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 青色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 緑色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 黄色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 紫色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 黒色 <div class="addon_store_install" onclick="">インストール</div>
+            <br>└ 白色(デフォルトでオン) <div class="addon_store_install" onclick="">インストール</div></div>
             <br><div class="addon_store_app" onclick="">Windows風 <div class="addon_store_install" onclick="">インストール</div>
             <br>└ 壁紙 <div class="addon_store_install" onclick="">インストール</div>
             <br>└ アプリ系 <div class="addon_store_install" onclick="">インストール</div>
@@ -330,18 +346,9 @@
             <span class="app_name">メモ帳</span>
             <span class="app_close" onclick="memo_close()"><img src="images/batu.png"></span>
             <span id="memo_size"><span class="app_size_change" onclick="memo_size()"><img src="images/kakudai.png"></span></span>
-            ファイル
-            <details>
-            <br>読み込み 
-            <br>上書き保存 
-            <br>名前を付けて保存
-            </details>
-            設定
-            <details>
-            <br>行
-            <br>文字
-            <br>背景  
-            </details>
+            <span id="load" onclick="load()">読み込み</span>
+            <span id="write" onclick="write()">上書き保存</span>
+            <span id="name_write" onclick="name_write()">名前を付けて保存</span>
         </span>
         <textarea name="" id="bscode_area" style="width: 100%; height: 100%; margin-top: 55px;" autocomplete="on"></textarea>
     </span>
@@ -351,20 +358,9 @@
             <span class="app_name">MyTube</span>
             <span class="app_close" onclick="mytube_close()"><img src="images/batu.png"></span>
             <span id="mytube_size"><span class="app_size_change" onclick="mytube_size()"><img src="images/kakudai.png"></span></span>
-            ファイル
-            <details>
-            <br>読み込み 
-            <br>上書き保存 
-            <br>名前を付けて保存
-            </details>
-            設定
-            <details>
-            <br>行
-            <br>文字
-            <br>背景  
-            </details>
         </span>
-        <textarea name="" id="" style="width: 100%; height: 100%; margin-top: 55px;"></textarea>
+
+
     </span>
 
 

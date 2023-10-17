@@ -16,6 +16,18 @@ function theme_change() {
 }
 
 // bar
+
+// bar_time
+function schedule() {
+  document.getElementById("schedule").classList.remove("app_close_anime");
+  document.getElementById("schedule").style.display = "block";
+}
+
+function schedule_close() {
+  document.getElementById("schedule").classList.add("app_close_anime");
+}
+// //bar_time
+
 // bar_control_center
 function control_center_show() {
     document.getElementById("control_center").style.display = "block";
