@@ -501,21 +501,6 @@ body {
     animation: app_open_anime 0.45s ease 0s 1 normal forwards;
 }
 
-#map {
-    resize: both;
-    overflow: auto;
-    position: absolute;
-    display: none;
-    width: 55%;
-    height: 65%;
-    transition: 0.30s;
-    border-radius: 10px;
-    background-color: black;
-    color: #fff;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-    animation: app_open_anime 0.45s ease 0s 1 normal forwards;
-}
-
 #filer {
     resize: both;
     overflow: auto;

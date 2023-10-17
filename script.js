@@ -260,27 +260,6 @@ document.getElementById("camera_size").innerHTML = '<span class="app_size_change
 }
 // //app_camera
 
-// app_map
-function map_open() {
-  document.getElementById("map").classList.remove("app_close_anime");
-  document.getElementById("map").style.display = "block";
-}
-
-function map_close() {
-  document.getElementById("map").classList.add("app_close_anime");
-}
-
-function map_size() {
-document.getElementById("map").classList.add("app_size");
-document.getElementById("map_size").innerHTML = '<span class="app_size_change" onclick="map_size_return()"><img src="images/syukusyou.png"></span>';
-}
-
-function map_size_return() {
-document.getElementById("map").classList.remove("app_size");
-document.getElementById("map_size").innerHTML = '<span class="app_size_change" onclick="map_size()"><img src="images/kakudai.png"></span>';
-}
-// //app_map
-
 // app_filer
 function filer_open() {
   document.getElementById("filer").classList.remove("app_close_anime");
