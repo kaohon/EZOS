@@ -33,7 +33,7 @@
             </span>
         </span>
         <span id="schedule">
-            
+
         </span>
 <!------------------------->
 <!--       /上バー        -->
@@ -41,15 +41,29 @@
 <!------------------------->
         <span id="sita">
             <span class="sita_icon" id="sita_icon_internet" onclick="internet_open()"><img src="images/internet.png"></span>
+                <span class="app_preview" id="pre_internet"><img src="images/pre_internet.png"></span>
             <span class="sita_icon" id="sita_icon_music_player" onclick="music_player_open()"><img src="images/musicplayer.png"></span>
+                <span class="app_preview" id="pre_music_player"><img src="pre_music_player.png"></span>
             <span class="sita_icon" id="sita_icon_setting" onclick="setting_open()"><img src="images/setting.png"></span>
+                <span class="app_preview" id="pre_setting"><img src="pre_setting.png"></span>
             <span class="sita_icon" id="sita_icon_feedback" onclick="feedback_open()"><img src="images/feedback.png"></span>
+                <span class="app_preview" id="pre_feedback"><img src="pre_feedback.png"></span>
             <span class="sita_icon" id="sita_icon_addon_store" onclick="addon_store_open()"><img src="images/store.png"></span>
+                <span class="app_preview" id="pre_store"><img src="pre_store.png"></span>
             <span class="sita_icon" id="sita_icon_clock" onclick="clock_open()"><img src="images/clock.png"></span>
+                <span class="app_preview" id="pre_clock"><img src="pre_clock.png"></span>
             <span class="sita_icon" id="sita_icon_cal" onclick="cal_open()"><img src="images/cal.png"></span>
+                <span class="app_preview" id="pre_cal"><img src="pre_cal.png"></span>
             <span class="sita_icon" id="sita_icon_memo" onclick="memo_open()"><img src="images/memo.png"></span>
+                <span class="app_preview" id="pre_memo"><img src="pre_memo.png"></span>
             <span class="sita_icon" id="sita_icon_filer" onclick="filer_open()"><img src="images/file.png"></span>
+                <span class="app_preview" id="pre_filer"><img src="pre_filer.png"></span>
             <span class="sita_icon" id="sita_icon_camera" onclick="camera_open()"><img src="images/camera.png"></span>
+                <span class="app_preview" id="pre_camera"><img src="pre_camera.png"></span>
+            <span class="sita_icon" id="sita_icon_bscode" onclick="bscode_open()"><img src="images/bscode.png"></span>
+                <span class="app_preview" id="pre_bscode"><img src="pre_bscode.png"></span>
+            <span class="sita_icon" id="sita_icon_mytube" onclick="mytube_open()"><img src="images/mytube.png"></span>
+                <span class="app_preview" id="pre_mytube"><img src="pre_mytube.png"></span>
         </span>
 <!------------------------->
 <!--       /下バー        -->
@@ -57,10 +71,7 @@
 <!------------------------->
         <span id="hidari">
             <span id="hidari_items">
-                <span id="virtual_window_button" onclick="virtual_window_open()">❑</span>
-                    <span id="virtual_window" hidden>
-                        デスク 仮想デスク1 仮想デスク2 仮想デスク3 仮想デスク4
-                    </span>
+                <span id="virtual_window_changer"><span id="virtual_window_button" onclick="virtual_window_open()">❑</span></span>
                 <span id="all_app_changer"><span id="all_app_button" onclick="all_app_open()">＋</span></span>
                 <span id="search_changer"><span id="search_button" onclick="search_open()">🔍</span></span>
             </span>
@@ -102,6 +113,10 @@
             <p class="app_icon_name">ファイラー</p>
         <span class="app_icon" onclick="camera_open()"><img src="images/camera.png"></span>
             <p class="app_icon_name">カメラ</p>
+        <span class="app_icon" onclick="bscode_open()"><img src="images/bscode.png"></span>
+            <p class="app_icon_name">BsCode</p>
+        <span class="app_icon" onclick="mytube_open()"><img src="images/mytube.png"></span>
+            <p class="app_icon_name">MyTube</p>
     </span>
 </span>
 <!------------------------->
@@ -115,6 +130,13 @@
 </span>
 <!------------------------->
 <!--     /サーチ          -->
+<!--     仮想ウィンドウ    -->
+<!------------------------->
+<span id="virtual_window">
+    デスク 仮想デスク1 仮想デスク2 仮想デスク3 仮想デスク4
+</span>
+<!------------------------->
+<!--     /仮想ウィンドウ   -->
 <!--     アプリ           -->
 <!------------------------->
     <span id="internet" class="drag-and-drop">
@@ -152,11 +174,12 @@
                         ライティングシャドウ
                         他のテーマをアドオンストアで入手
                     </span>
-
                 <span>背景</span>
                 <span>色</span>
-                <span>フォント</span>
-        </span></span>
+                <span>フォント
+            </span>
+        </span>
+    </span>
 
     <span id="feedback" class="drag-and-drop">
         <span class="app_header">
@@ -192,7 +215,6 @@
             <span id="music_ramdom">×🔀×</span>
             <span id="loop_changer"><span id="music_loop" onclick="onloop()">×🔁×</span></span>
             <span id="music_volume"><input type="range" id="musicvolume" min="0" max="100" step="5"></span> 
-            </p>
         </span>
     </span>
 
@@ -228,34 +250,34 @@
             <span id="cal_body">
                 <input value="" id="screen" placeholder="0"><br>
                 <div id="calc_button">
-                    <div id="line1">
-                        <button id="del" onclick="del()">C</button> 
-                        <button id="p_m" onclick="p_m()">±</button>
-                        <button id="pow" onclick="pw()">^</button>
-                        <button id="div" onclick="div()">÷</button><br>
+                    <div class="line">
+                        <button class="cal_b" id="del" onclick="del()">C</button> 
+                        <button class="cal_b" id="p_m" onclick="p_m()">±</button>
+                        <button class="cal_b" id="pow" onclick="pw()">^</button>
+                        <button class="cal_b" id="div" onclick="div()">÷</button><br>
                     </div>
-                    <div id="line2">
-                        <button id="sev" onclick="sev()">7</button>
-                        <button id="eig" onclick="eig()">8</button>
-                        <button id="nin" onclick="nin()">9</button>
-                        <button id="mul" onclick="mul()">×</button><br>
+                    <div class="line">
+                        <button class="cal_b" id="sev" onclick="sev()">7</button>
+                        <button class="cal_b" id="eig" onclick="eig()">8</button>
+                        <button class="cal_b" id="nin" onclick="nin()">9</button>
+                        <button class="cal_b" id="mul" onclick="mul()">×</button><br>
                     </div>
-                    <div id="line3">
-                       <button id="fou" onclick="fou()">4</button>
-                       <button id="fiv" onclick="fiv()">5</button>
-                       <button id="six" onclick="six()">6</button>
-                       <button id="sub" onclick="sub()">-</button><br>
+                    <div class="line">
+                       <button class="cal_b" id="fou" onclick="fou()">4</button>
+                       <button class="cal_b" id="fiv" onclick="fiv()">5</button>
+                       <button class="cal_b" id="six" onclick="six()">6</button>
+                       <button class="cal_b" id="sub" onclick="sub()">-</button><br>
                     </div>
-                    <div id="line4">
-                        <button id="one" onclick="one()">1</button>
-                        <button id="two" onclick="two()">2</button>
-                        <button id="thr" onclick="thr()">3</button>
-                        <button id="add" onclick="add()">+</button><br>
+                    <div class="line">
+                        <button class="cal_b" id="one" onclick="one()">1</button>
+                        <button class="cal_b" id="two" onclick="two()">2</button>
+                        <button class="cal_b" id="thr" onclick="thr()">3</button>
+                        <button class="cal_b" id="add" onclick="add()">+</button><br>
                     </div>
-                    <div id="line5">
-                        <button id="zer" onclick="zer()">0</button>
-                        <button id="com" onclick="com()">.</button>
-                        <button id="equ" onclick="equ()">=</button>
+                    <div class="line">
+                        <button class="cal_b" id="zer" onclick="zer()">0</button>
+                        <button class="cal_b" id="com" onclick="com()">.</button>
+                        <button class="cal_b" id="equ" onclick="equ()">=</button>
                     </div>
                 </div>
             </span>
@@ -265,8 +287,8 @@
     <span id="addon_store" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">アドオンストア</span>
-            <span id="addon_store_size"><span class="app_size_change" onclick="addon_store_size()"><img src="images/kakudai.png"></span></span>
             <span class="app_close" onclick="addon_store_close()"><img src="images/batu.png"></span>
+            <span id="addon_store_size"><span class="app_size_change" onclick="addon_store_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
             <span id="store_app">アプリ</span>
@@ -297,8 +319,7 @@
             <br>└ アプリ系 <div class="addon_store_install" onclick="">インストール</div>
             <br>└ 設定系 <div class="addon_store_install" onclick="">インストール</div></div>
             <br><span id="store_addon">アドオン</span>
-            <br>言語パッチ 英語
-            
+            <br>言語パッチ 英語    
         </span>
     </span>
 
@@ -325,18 +346,20 @@
             <span class="app_name">ファイラー</span>
             <span class="app_close" onclick="filer_close()"><img src="images/batu.png"></span>
             <span id="filer_size"><span class="app_size_change" onclick="filer_size()"><img src="images/kakudai.png"></span></span>
-        </span>
-        <span class="app_body">
-            デスクトップ
-            ダウンロード
-            テキスト
-            ミュージック
-            ピクチャ
-            ムービー
-            <source>
-            <form name="my">
-                <input id="m" type="file">
-                <div id="bgs"></div>
+                <span id="load" onclick="load()">読み込み</span>
+            </span>
+            <span class="app_body">
+                デスクトップ
+                ダウンロード
+                テキスト
+                ミュージック
+                ピクチャ
+                ムービー
+                <source>
+                <form name="my">
+                    <input id="m" type="file">
+                    <div id="bgs">
+                </div>
             </form>
         </span>
     </span>
@@ -346,37 +369,47 @@
             <span class="app_name">メモ帳</span>
             <span class="app_close" onclick="memo_close()"><img src="images/batu.png"></span>
             <span id="memo_size"><span class="app_size_change" onclick="memo_size()"><img src="images/kakudai.png"></span></span>
-            <span id="load" onclick="load()">読み込み</span>
-            <span id="write" onclick="write()">上書き保存</span>
-            <span id="name_write" onclick="name_write()">名前を付けて保存</span>
+                <span id="load" onclick="load()">読み込み</span>
+                <span id="write" onclick="write()">上書き保存</span>
+                <span id="name_write" onclick="name_write()">名前を付けて保存</span>
+            </span>
+            <span class="app_body">
+                <textarea name="" id="memo_area" style="width: 100%; height: 100%; margin-top: 55px;" autocomplete="on"></textarea>
         </span>
-        <textarea name="" id="bscode_area" style="width: 100%; height: 100%; margin-top: 55px;" autocomplete="on"></textarea>
     </span>
 
-    <span id="mytube" class="drag-and-drop" hidden>
+    <span id="mytube" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">MyTube</span>
             <span class="app_close" onclick="mytube_close()"><img src="images/batu.png"></span>
             <span id="mytube_size"><span class="app_size_change" onclick="mytube_size()"><img src="images/kakudai.png"></span></span>
         </span>
-
-
+        <span class="app_body">
+            急上昇
+            <span class="video_sam" id="video_1"></span>
+            <span class="video_sam" id="video_2"></span>
+            <span class="video_sam" id="video_3"></span>
+            <span class="video_sam" id="video_4"></span>
+        </span>
     </span>
 
 
-    <span id="bscode" hidden>
+    <span id="bscode" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">Browser Studio Code</span>
-            <span class="app_close" onclick="filer_close()">☓</span>
-            <span id="bscode_size"><span class="app_size_change" onclick="filer_size()">☐</span></span>
+            <span class="app_close" onclick="bscode_close()"><img src="images/batu.png"></span>
+            <span id="bscode_size"><span class="app_size_change" onclick="bscode_size()"><img src="images/kakudai.png"></span></span>
+                <span id="load" onclick="load()">読み込み</span>
+                <span id="write" onclick="write()">上書き保存</span>
+                <span id="name_write" onclick="name_write()">名前を付けて保存</span>
+            </span>
+            <span class="app_body">
+                <textarea name="" id="bscode_area" style="width: 100%; height: 100%; margin-top: 55px;" autocomplete="on"></textarea>
         </span>
-        <span class="app_body">
-            ファイル
-        </span>
+    </span>
 <!------------------------->
 <!--     /アプリ          -->
 <!------------------------->
-</span>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script><script src="autocomp.js"></script>
         <script src="tab.js"></script>

@@ -13,6 +13,11 @@ function theme_change() {
   $("#sita_icon_addon_store").html('<img src="images/store_01.png">');
   $("#sita_icon_clock").html('<img src="images/clock_01.png">');
   $("#sita_icon_cal").html('<img src="images/cal_01.png">');
+  $("#sita_icon_memo").html('<img src="images/memo_01.png">');
+  $("#sita_icon_filer").html('<img src="images/file_01.png">');
+  $("#sita_icon_camera").html('<img src="images/camera_01.png">');
+  $("#sita_icon_bscode").html('<img src="images/bscode_01.png">');
+  $("#sita_icon_mytube").html('<img src="images/mytube_01.png">');
 }
 
 // bar
@@ -80,6 +85,19 @@ document.getElementById("search").classList.add("all_app_anime");
 document.getElementById("search_changer").innerHTML = '<span id="search_button" onclick="search_open()">🔍</span>';
 }
 // //bar_search
+
+// bar_virtual_window
+function virtual_window_open() {
+  document.getElementById("virtual_window").classList.remove("all_app_anime");
+  document.getElementById("virtual_window").style.display = "block";
+  document.getElementById("virtual_window_changer").innerHTML = '<span id="virtual_window_button" onclick="virtual_window_none()">❑</span>';
+}
+
+function virtual_window_none() {
+  document.getElementById("virtual_window").classList.add("all_app_anime");
+  document.getElementById("virtual_window_changer").innerHTML = '<span id="virtual_window_button" onclick="virtual_window_open()">❑</span>';
+  }
+// //bar_virtual_window
 // //bar
 
 // app
@@ -293,6 +311,48 @@ document.getElementById("filer_size").innerHTML = '<span class="app_size_change"
 }
 // //app_filer
 
+// app_bscode
+function bscode_open() {
+  document.getElementById("bscode").classList.remove("app_close_anime");
+  document.getElementById("bscode").style.display = "block";
+}
+
+function bscode_close() {
+  document.getElementById("bscode").classList.add("app_close_anime");
+}
+
+function bscode_size() {
+document.getElementById("bscode").classList.add("app_size");
+document.getElementById("bscode_size").innerHTML = '<span class="app_size_change" onclick="bscode_size_return()"><img src="images/syukusyou.png"></span>';
+}
+
+function bscode_size_return() {
+document.getElementById("bscode").classList.remove("app_size");
+document.getElementById("bscode_size").innerHTML = '<span class="app_size_change" onclick="bscode_size()"><img src="images/kakudai.png"></span>';
+}
+// //app_bscode
+
+// app_mytube
+function mytube_open() {
+  document.getElementById("mytube").classList.remove("app_close_anime");
+  document.getElementById("mytube").style.display = "block";
+}
+
+function mytube_close() {
+  document.getElementById("mytube").classList.add("app_close_anime");
+}
+
+function mytube_size() {
+document.getElementById("mytube").classList.add("app_size");
+document.getElementById("mytube_size").innerHTML = '<span class="app_size_change" onclick="mytube_size_return()"><img src="images/syukusyou.png"></span>';
+}
+
+function mytube_size_return() {
+document.getElementById("mytube").classList.remove("app_size");
+document.getElementById("mytube_size").innerHTML = '<span class="app_size_change" onclick="mytube_size()"><img src="images/kakudai.png"></span>';
+}
+// //app_mytube
+
 // cal_script
 function del() {
   document.getElementById('screen').value = document.getElementById('screen').value.slice(0,-1);
@@ -386,3 +446,99 @@ function timer() {
   document.getElementById("clock_change").innerHTML = "カウントアップ <span onclick='down()'>カウントダウン</span> <span onclick='hour1()'>+1h</span> <span onclick='minute1()'>+1m</span> <span onclick='second1()'>+1s</span>"
 }
 // //clock_script
+
+$('#sita_icon_internet').hover(
+  function() {
+    document.getElementById("pre_internet").style.display = "block";
+  }, function() {
+    document.getElementById("pre_internet").style.display = "none";
+  }
+);
+
+$('#sita_icon_music_player').hover(
+  function() {
+    document.getElementById("pre_music_player").style.display = "block";
+  }, function() {
+    document.getElementById("pre_music_player").style.display = "none";
+  }
+);
+
+$('#sita_icon_setting').hover(
+  function() {
+    document.getElementById("pre_setting").style.display = "block";
+  }, function() {
+    document.getElementById("pre_setting").style.display = "none";
+  }
+);
+
+$('#sita_icon_feedback').hover(
+  function() {
+    document.getElementById("pre_feedback").style.display = "block";
+  }, function() {
+    document.getElementById("pre_feedback").style.display = "none";
+  }
+);
+
+$('#sita_icon_addon_store').hover(
+  function() {
+    document.getElementById("pre_store").style.display = "block";
+  }, function() {
+    document.getElementById("pre_store").style.display = "none";
+  }
+);
+
+$('#sita_icon_clock').hover(
+  function() {
+    document.getElementById("pre_clock").style.display = "block";
+  }, function() {
+    document.getElementById("pre_clock").style.display = "none";
+  }
+);
+
+$('#sita_icon_cal').hover(
+  function() {
+    document.getElementById("pre_cal").style.display = "block";
+  }, function() {
+    document.getElementById("pre_cal").style.display = "none";
+  }
+);
+
+$('#sita_icon_memo').hover(
+  function() {
+    document.getElementById("pre_memo").style.display = "block";
+  }, function() {
+    document.getElementById("pre_memo").style.display = "none";
+  }
+);
+
+$('#sita_icon_filer').hover(
+  function() {
+    document.getElementById("pre_filer").style.display = "block";
+  }, function() {
+    document.getElementById("pre_filer").style.display = "none";
+  }
+);
+
+$('#sita_icon_camera').hover(
+  function() {
+    document.getElementById("pre_camera").style.display = "block";
+  }, function() {
+    document.getElementById("pre_camera").style.display = "none";
+  }
+);
+
+$('#sita_icon_bscode').hover(
+  function() {
+    document.getElementById("pre_bscode").style.display = "block";
+  }, function() {
+    document.getElementById("pre_bscode").style.display = "none";
+  }
+);
+
+$('#sita_icon_mytube').hover(
+  function() {
+    document.getElementById("pre_mytube").style.display = "block";
+  }, function() {
+    document.getElementById("pre_mytube").style.display = "none";
+  }
+);
