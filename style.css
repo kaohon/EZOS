@@ -262,7 +262,7 @@ body {
 
 @keyframes menu_open {
     0% {
-        transform: translatex(-295px);
+        transform: translatex(-315px);
     } 100% {
         transform: translatex(0px);
     }
@@ -271,10 +271,23 @@ body {
     0% {
         transform: translatex(0px);
     } 100% {
-        transform: translatex(-295px);
+        transform: translatex(-315px);
     }
 } 
-
+@keyframes preanime_open {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+} 
+@keyframes preanime_close {
+    0% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+} 
 /* //bar_animes */ 
  
 /* app_header,body */
@@ -366,18 +379,55 @@ body {
     animation: app_close_anime 0.45s ease 0s 1 normal forwards !important;
 }
 
-.pre_internet {
+.preanime_close {
+    animation: preanime_close 0.45s ease 0s 1 normal forwards !important;
+}
+
+.app_preview {
+    display: none;
     position: absolute;
-    width: 280px;
-    height: 150px;
-    margin-top: 215px;
-    right: 5px;
+    width: 350px;
+    height: 252.5px;
+    bottom: 50px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: large;
     text-align: center;
+    z-index: 1;
     box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    animation: preanime_open 0.45s ease 0s 1 normal forwards;
+} .app_preview img {
+    margin-top: 5px;
+    width: 340px;
+    height: 215px;
+    border-radius: 10px;
+}
+
+#pre_internet {
+    left: 5px;
+} #pre_music_player {
+    left: 50px;
+} #pre_setting {
+    left: 85px;
+} #pre_feedback {
+    left: 130px;
+} #pre_store {
+    left: 170px;
+} #pre_clock {
+    left: 205px;
+} #pre_cal {
+    left: 250px;
+} #pre_memo {
+    left: 290px;
+} #pre_filer {
+    left: 325px;
+} #pre_camera {
+    left: 360px;
+} #pre_bscode {
+    left: 400px;
+} #pre_mytube {
+    left: 445px;
 }
 
 .drag-and-drop {

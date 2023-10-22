@@ -450,95 +450,107 @@ function timer() {
 $('#sita_icon_internet').hover(
   function() {
     document.getElementById("pre_internet").style.display = "block";
+    document.getElementById("pre_internet").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_internet").style.display = "none";
+    document.getElementById("pre_internet").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_music_player').hover(
   function() {
     document.getElementById("pre_music_player").style.display = "block";
+    document.getElementById("pre_music_player").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_music_player").style.display = "none";
+    document.getElementById("pre_music_player").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_setting').hover(
   function() {
     document.getElementById("pre_setting").style.display = "block";
+    document.getElementById("pre_setting").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_setting").style.display = "none";
+    document.getElementById("pre_setting").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_feedback').hover(
   function() {
     document.getElementById("pre_feedback").style.display = "block";
+    document.getElementById("pre_feedback").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_feedback").style.display = "none";
+    document.getElementById("pre_feedback").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_addon_store').hover(
   function() {
     document.getElementById("pre_store").style.display = "block";
+    document.getElementById("pre_store").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_store").style.display = "none";
+    document.getElementById("pre_store").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_clock').hover(
   function() {
     document.getElementById("pre_clock").style.display = "block";
+    document.getElementById("pre_clock").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_clock").style.display = "none";
+    document.getElementById("pre_clock").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_cal').hover(
   function() {
     document.getElementById("pre_cal").style.display = "block";
+    document.getElementById("pre_cal").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_cal").style.display = "none";
+    document.getElementById("pre_cal").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_memo').hover(
   function() {
     document.getElementById("pre_memo").style.display = "block";
+    document.getElementById("pre_memo").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_memo").style.display = "none";
+    document.getElementById("pre_memo").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_filer').hover(
   function() {
     document.getElementById("pre_filer").style.display = "block";
+    document.getElementById("pre_filer").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_filer").style.display = "none";
+    document.getElementById("pre_filer").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_camera').hover(
   function() {
     document.getElementById("pre_camera").style.display = "block";
+    document.getElementById("pre_camera").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_camera").style.display = "none";
+    document.getElementById("pre_camera").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_bscode').hover(
   function() {
     document.getElementById("pre_bscode").style.display = "block";
+    document.getElementById("pre_bscode").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_bscode").style.display = "none";
+    document.getElementById("pre_bscode").classList.add("preanime_close");
   }
 );
 
 $('#sita_icon_mytube').hover(
   function() {
     document.getElementById("pre_mytube").style.display = "block";
+    document.getElementById("pre_mytube").classList.remove("preanime_close");
   }, function() {
-    document.getElementById("pre_mytube").style.display = "none";
+    document.getElementById("pre_mytube").classList.add("preanime_close");
   }
 );
