@@ -82,8 +82,11 @@
 <!--     ウィジェット      -->
 <!------------------------->
     <span id="widget">
-        EZOS
-        <br>Demo Version
+        EZOS ChangeLog
+        <br>・タイマー機能の追加
+        <br>・アプリプレビュー機能の追加
+        <br>・ライティングシャドウの追加
+        <br>・カレンダー機能の追加
     </span>
 <!------------------------->
 <!--     /ウィジェット     -->
@@ -229,13 +232,20 @@
             <span class="app_close" onclick="clock_close()"><img src="images/batu.png"></span>
             <span id="clock_size"><span class="app_size_change" onclick="clock_size()"><img src="images/kakudai.png"></span></span>
         </span>
-        <span class="app_body">
-                <span id="clock_change">
+            <span class="app_body">
+                <span id="nowtime">
                     <span id="timebelt">現在時刻</span>
                     <br>
                     <span id="ymdtime"></span>
                     <br>
                     <span id="hmstime"></span>
+                </span>
+                <span id="nowtimer">
+                    カウントアップ <span onclick='down()'>カウントダウン</span>
+                    <span onclick='hour1()'>+1h</span> 
+                    <span onclick='minute1()'>+1m</span>
+                    <span onclick='second1()'>+1s
+                </span>
             </span>
         </span>
     </span>

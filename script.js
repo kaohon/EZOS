@@ -50,12 +50,12 @@ function reload() {
 }
 
 function fullscreen() {
-  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="exit_fullscreen()">⬜</span>';
+  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="exit_fullscreen()"><img src="images/exit_fullscreen.png"></span></span>';
   document.documentElement.requestFullscreen();
 }
 
 function exit_fullscreen() {
-  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="fullscreen()">⬜</span>';
+  document.getElementById("fullscreen").innerHTML = '<span class="app_icon" onclick="fullscreen()"><img src="images/fullscreen.png"></span></span>';
   document.exitFullscreen();
 }
 // //bar_control_center
@@ -439,11 +439,13 @@ function offloop() {
 
 // clock_script
 function currenttime() {
-  document.getElementById("clock_change").innerHTML = "<span id='timebelt'>現在時刻</span><br><span id='ymdtime'></span><br><span id='hmstime'></span>"
+  document.getElementById("nowtime").style.display = "block";
+  document.getElementById("nowtimer").style.display = "none";
 }
 
 function timer() {
-  document.getElementById("clock_change").innerHTML = "カウントアップ <span onclick='down()'>カウントダウン</span> <span onclick='hour1()'>+1h</span> <span onclick='minute1()'>+1m</span> <span onclick='second1()'>+1s</span>"
+  document.getElementById("nowtimer").style.display = "block";
+  document.getElementById("nowtime").style.display = "none";
 }
 // //clock_script
 

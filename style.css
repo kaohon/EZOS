@@ -737,6 +737,12 @@ body {
     font-size: 200px;
 }
 
+#nowtime {
+    display: block;
+}
+#nowtimer {
+    display: none;
+}
 /* //clock_body */
 
 /* cal_body */
