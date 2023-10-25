@@ -743,6 +743,30 @@ body {
 #nowtimer {
     display: none;
 }
+
+#hourtime {
+    position: absolute;
+    width: 500px;
+    top: 200px;
+    text-align: center;
+    margin-left: -350px;
+    font-size: 200px;
+}
+#mintime {
+    position: absolute;
+    width: 500px;
+    top: 200px; 
+    text-align: center;
+    font-size: 200px;
+}
+#sectime {
+    position: absolute;
+    width: 500px;
+    top: 200px;
+    text-align: center;
+    margin-left: 350px;
+    font-size: 200px;
+}
 /* //clock_body */
 
 /* cal_body */

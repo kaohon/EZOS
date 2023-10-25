@@ -226,7 +226,7 @@
             <span id="select">
                 <span id="currenttime" onclick="currenttime()"><img src="images/clock.png"></span>
                 <span id="timer" onclick="timer()"><img src="images/timer.png"></span>
-                <span id="stopwatch"><img src="images/stopwatch.png"></span><span id='gentime'></span>
+                <span id="stopwatch"><img src="images/stopwatch.png"></span>
             </span>
             <span class="app_name">時計</span>
             <span class="app_close" onclick="clock_close()"><img src="images/batu.png"></span>
@@ -246,6 +246,13 @@
                     <span onclick='minute1()'>+1m</span>
                     <span onclick='second1()'>+1s
                 </span>
+                <span onclick='minus_hour1()'>-1h</span> 
+                    <span onclick='minus_minute1()'>-1m</span>
+                    <span onclick='minus_second1()'>-1s
+                </span>
+                    <span id='hourtime'></span>
+                    <span id='mintime'></span>
+                    <span id='sectime'></span>
             </span>
         </span>
     </span>
