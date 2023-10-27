@@ -746,25 +746,25 @@ body {
 
 #hourtime {
     position: absolute;
-    width: 500px;
+    white-space: nowrap;
     top: 200px;
-    text-align: center;
-    margin-left: -350px;
+    left: 0%; transform: translate(-50%, 0%);
+    padding-right: 200px;
     font-size: 200px;
 }
 #mintime {
     position: absolute;
-    width: 500px;
+    white-space: nowrap;
     top: 200px; 
-    text-align: center;
+    left: 50%; transform: translate(-50%, 0%);
     font-size: 200px;
 }
 #sectime {
     position: absolute;
-    width: 500px;
+    white-space: nowrap;
     top: 200px;
-    text-align: center;
-    margin-left: 350px;
+    right: 0%; transform: translate(50%, 0%);
+    padding-left: 200px;
     font-size: 200px;
 }
 /* //clock_body */
