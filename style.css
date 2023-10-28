@@ -916,3 +916,7 @@ body {
 }
 
 /* cal_body */
+
+#ac_name_change {
+    display: none;
+}

@@ -33,8 +33,20 @@
             </span>
         </span>
         <span id="schedule">
-
+            <span id="my_prof">
+                    <input id="up_account" type="file">
+                <span id="account_icon"></span>
+                    <span id="ac_name_change">
+                        <input id="ac_name_pre" type="text">
+                        <button onclick="name_decide()">決定</button>
+                    </span>
+                    <p id="account_name">guest さん</p>
+                    <div onclick="ac_name_changer()">
+                        <img src="images/pencil.png" width="10px" height="10px">
+                    </div>
+            </span>
         </span>
+    </span>
 <!------------------------->
 <!--       /上バー        -->
 <!--       下バー         -->
@@ -89,12 +101,7 @@
 <!--     /ウィジェット     -->
 <!--     アプリセンター    -->
 <!------------------------->
-<span id="all_app">
-    <span id="my_prof">
-        <span id="account_icon"></span>
-            <p id="account_name"></p>
-        <span id="">
-    </span>        
+<span id="all_app">        
     <span id="all_app_l1">
         <span class="app_icon" onclick="internet_open()"><img src="images/internet.png"></span>
             <p class="app_icon_name">インターネット</p>
@@ -170,8 +177,7 @@
             <span id="setting_system" class="setting_tabs">💻 システム</span>
                 <span>通知</span>
                 <span onclick="ver()">バージョン</span>
-                    <span>バージョン:0.29<br>最新バージョン:0.29<br>最新開発中バージョン:0.30 Alpha</span>
-                <span></span>
+                    <span>バージョン:0.32<br>最新バージョン:0.32<br>最新開発中バージョン:0.33 Alpha</span>
             <br>
             <span id="setting_theme" class="setting_tabs">🖌️ 個人用設定</span>
                 <span id="theme_button" onclick="theme()">テーマ</span>
@@ -207,13 +213,11 @@
             <span id="music_player_size"><span class="app_size_change" onclick="music_player_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
-                <form name="myform">
-                    <input id="myfile" type="file">
-                    <div id="music_p"></div>
-                    <div id="video_p"></div>
-                </form>
-            <button onclick="console.log(getElementById('music').currentTime)">now^^</button>
-            <button onclick="console.log(getElementById('music').duration)">au^^?</button>
+                    <input id="up_music" type="file">
+                <div id="music_p"></div>
+                <div id="video_p"></div>
+            <span id="current_time">/</span>
+            <span id="durations"></span>
             <span id="music_previous">⏮️</span>
             <span id="pause_play_changer"><span id="music_start" onclick="play()">▶️</span></span>
             <span id="music_reset" onclick="pause()">⏹️</span>
@@ -312,8 +316,8 @@
         </span>
         <span class="app_body">
             <span id="store_app">アプリ</span>
-            <br><div class="addon_store_app" onclick="bscw_dl()">アプリメーカー<div class="addon_store_install" onclick="">インストール</div></div>
-            <br><div class="addon_store_app" onclick="bscw_dl()">Browser Studio Code <div class="addon_store_install" onclick="">インストール</div>
+            <br><div class="addon_store_app" onclick="">アプリメーカー<div class="addon_store_install" onclick="">インストール</div></div>
+            <br><div class="addon_store_app" onclick="">Browser Studio Code <div class="addon_store_install" onclick="bscw_dl()">インストール</div>
             <br>└ Canary <div class="addon_store_install" onclick="bscw_canary_dl()">インストール</div>
             <br>└ Dev <div class="addon_store_install" onclick="bscw_dev_dl()">インストール</div>
             <br>└ Preview <div class="addon_store_install" onclick="bscw_preview_dl()">インストール</div></div>
@@ -376,11 +380,9 @@
                 ピクチャ
                 ムービー
                 <source>
-                <form name="my">
-                    <input id="m" type="file">
-                    <div id="bgs">
+                    <input id="up_file" type="file">
+                    <div id="files">
                 </div>
-            </form>
         </span>
     </span>
 

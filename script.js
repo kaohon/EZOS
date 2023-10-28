@@ -412,6 +412,8 @@ function com() {
 // //cal_script
 
 // musicplayer_script
+durations.innerHTML = document.getElementById('music_p').duration;
+
 function play() {
   document.getElementById('music').play();
   document.getElementById('video').play();
@@ -556,3 +558,12 @@ $('#sita_icon_mytube').hover(
     document.getElementById("pre_mytube").classList.add("preanime_close");
   }
 );
+
+function ac_name_changer() {
+  document.getElementById("ac_name_change").style.display = "block";
+}
+
+function name_decide() {
+  account_name.innerHTML = document.getElementById("ac_name_pre").value + " さん";
+  document.getElementById("ac_name_change").style.display = "none";
+}
