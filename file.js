@@ -52,6 +52,6 @@ var obj3 = document.getElementById("up_account");
               var dataUrl = account_reader.result;
           
               //読み込んだ画像とdataURLを書き出す
-              document.getElementById("account_icon").innerHTML = "<img src='" + dataUrl + "' width='100px' height='100px'>";
+              document.getElementById("account_icon_w").innerHTML = "<img src='" + dataUrl + "' id='account_icon' width='100px' height='100px'>";
             }
           },false);

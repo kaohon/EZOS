@@ -31,8 +31,8 @@ body {
     display: none;
     top: 40px;
     left: 50%;
-    width: 15%;
-    height: 25%;
+    width: 200px;
+    height: 250px;
     transition: 0.30s;
     border-radius: 10px;
     background-color: black;
@@ -919,4 +919,15 @@ body {
 
 #ac_name_change {
     display: none;
+}
+
+#account_icon {
+    position: absolute;
+    margin-top: 15px;
+    left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+#account_name {
+    text-align: center;
 }
