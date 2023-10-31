@@ -31,8 +31,8 @@ body {
     display: none;
     top: 40px;
     left: 50%;
-    width: 200px;
-    height: 250px;
+    width: 400px;
+    height: 350px;
     transition: 0.30s;
     border-radius: 10px;
     background-color: black;
@@ -103,7 +103,13 @@ body {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     animation: loadanime_sita 1s ease 0s 1 normal forwards;
     z-index: 1
-} .sita_icon {
+} #sita_migi {
+    right: 0px;
+    font-size: 24px;
+    color: #fff;
+    z-index: 1;
+} 
+.sita_icon {
     padding: 6px;
     transition: 0.30s;
 } .sita_icon img {
@@ -917,17 +923,30 @@ body {
 
 /* cal_body */
 
-#ac_name_change {
-    display: none;
-}
-
 #account_icon {
     position: absolute;
-    margin-top: 15px;
+    margin-top: 30px;
     left: 50%; 
     transform: translate(-50%, 0%);
 }
 
 #account_name {
     text-align: center;
+    margin-top: 135px;
+}
+
+#fusen {
+    position: absolute;
+    color: white;
+    font-size: large;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+
+    resize: both;
+    display:none;
+    width: 350px;
+    height: 252.5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);   
 }

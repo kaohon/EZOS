@@ -34,16 +34,8 @@
         </span>
         <span id="schedule">
             <span id="my_prof">
-                    <input id="up_account" type="file">
                 <span id="account_icon_w"></span>
-                    <span id="ac_name_change">
-                        <input id="ac_name_pre" type="text">
-                        <button onclick="name_decide()">決定</button>
-                    </span>
-                    <p id="account_name">guest さん</p>
-                    <div onclick="ac_name_changer()">
-                        <img src="images/pencil.png" style="text-align: center;" width="10px" height="10px">
-                    </div>
+                <p id="account_name">guest さん</p>
             </span>
         </span>
     </span>
@@ -76,6 +68,9 @@
                 <span class="app_preview" id="pre_bscode">Browser Studio Code<img src="images/pre_bscode.png"></span>
             <span class="sita_icon" id="sita_icon_mytube" onclick="mytube_open()"><img src="images/mytube.png"></span>
                 <span class="app_preview" id="pre_mytube">MyTube<img src="images/pre_mytube.png"></span>
+            <span id="sita_migi">
+                <span id="husen_show" onclick="husen_show()">+</span>
+            </span>   
         </span>
 <!------------------------->
 <!--       /下バー        -->
@@ -152,6 +147,9 @@
 <!--     /仮想ウィンドウ   -->
 <!--     アプリ           -->
 <!------------------------->
+
+<span id="husen" class="drag-and-drop"><textarea></textarea></span>
+
     <span id="internet" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">インターネット</span>
@@ -174,10 +172,16 @@
             <span id="setting_size"><span class="app_size_change" onclick="setting_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
+            <span id="setting_system" class="setting_tabs">👱 プロフィール</span>
+                アカウントアイコンの変更:<input id="up_account" type="file">
+                <span id="ac_name_change">
+                    <input id="ac_name_pre" type="text">
+                    <button onclick="name_decide()">決定</button>
+                </span>
             <span id="setting_system" class="setting_tabs">💻 システム</span>
-                <span>通知</span>
-                <span onclick="ver()">バージョン</span>
-                    <span>バージョン:0.32<br>最新バージョン:0.32<br>最新開発中バージョン:0.33 Alpha</span>
+                <br><span>通知</span>
+                <br><span onclick="ver()">バージョン</span>
+                    <span>バージョン:0.37<br>最新バージョン:0.37<br>最新開発中バージョン:0.38 Alpha</span>
             <br>
             <span id="setting_theme" class="setting_tabs">🖌️ 個人用設定</span>
                 <span id="theme_button" onclick="theme()">テーマ</span>

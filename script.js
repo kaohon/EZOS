@@ -577,5 +577,8 @@ function ac_name_changer() {
 
 function name_decide() {
   account_name.innerHTML = document.getElementById("ac_name_pre").value + " さん";
-  document.getElementById("ac_name_change").style.display = "none";
+}
+
+function husen_show() {
+  document.getElementById("husen").style.display = "block";
 }
