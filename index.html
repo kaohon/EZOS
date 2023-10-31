@@ -103,31 +103,31 @@
 <!------------------------->
 <span id="all_app">        
     <span id="all_app_l1">
-        <span class="app_icon" onclick="internet_open()"><img src="images/internet.png"></span>
+        <span class="app_icon" id="all_icon_internet" onclick="internet_open()"><img src="images/internet.png"></span>
             <p class="app_icon_name">インターネット</p>
-        <span class="app_icon" onclick="music_player_open()"><img src="images/musicplayer.png"></span>
+        <span class="app_icon" id="all_icon_music_player" onclick="music_player_open()"><img src="images/musicplayer.png"></span>
             <p class="app_icon_name">ミュージックプレーヤー</p>
-        <span class="app_icon" onclick="setting_open()"><img src="images/setting.png"></span>
+        <span class="app_icon" id="all_icon_setting" onclick="setting_open()"><img src="images/setting.png"></span>
             <p class="app_icon_name">設定</p>
-        <span class="app_icon" onclick="feedback_open()"><img src="images/feedback.png"></span>
+        <span class="app_icon" id="all_icon_feedback" onclick="feedback_open()"><img src="images/feedback.png"></span>
             <p class="app_icon_name">フィードバック</p>
-        <span class="app_icon" onclick="addon_store_open()"><img src="images/store.png"></span>
+        <span class="app_icon" id="all_icon_addon_store" onclick="addon_store_open()"><img src="images/store.png"></span>
             <p class="app_icon_name">アドオンストア</p>
-        <span class="app_icon" onclick="clock_open()"><img src="images/clock.png"></span>
+        <span class="app_icon" id="all_icon_clock" onclick="clock_open()"><img src="images/clock.png"></span>
             <p class="app_icon_name">時計</p>
     </span>
     <span id="all_app_l2">
-        <span class="app_icon" onclick="cal_open()"><img src="images/cal.png"></span>
+        <span class="app_icon" id="all_icon_cal" onclick="cal_open()"><img src="images/cal.png"></span>
             <p class="app_icon_name">電卓</p>
-        <span class="app_icon" onclick="memo_open()"><img src="images/memo.png"></span>
+        <span class="app_icon" id="all_icon_memo" onclick="memo_open()"><img src="images/memo.png"></span>
             <p class="app_icon_name">メモ帳</p>
-        <span class="app_icon" onclick="filer_open()"><img src="images/file.png"></span>
+        <span class="app_icon" id="all_icon_filer" onclick="filer_open()"><img src="images/file.png"></span>
             <p class="app_icon_name">ファイラー</p>
-        <span class="app_icon" onclick="camera_open()"><img src="images/camera.png"></span>
+        <span class="app_icon" id="all_icon_camera" onclick="camera_open()"><img src="images/camera.png"></span>
             <p class="app_icon_name">カメラ</p>
-        <span class="app_icon" onclick="bscode_open()"><img src="images/bscode.png"></span>
+        <span class="app_icon" id="all_icon_bscode" onclick="bscode_open()"><img src="images/bscode.png"></span>
             <p class="app_icon_name">BsCode</p>
-        <span class="app_icon" onclick="mytube_open()"><img src="images/mytube.png"></span>
+        <span class="app_icon" id="all_icon_mytube" onclick="mytube_open()"><img src="images/mytube.png"></span>
             <p class="app_icon_name">MyTube</p>
         </span>
     </span>
@@ -205,7 +205,7 @@
             ※☆は@ (comma)は. にそれぞれ変換してください。
         </span>
     </span>
-            
+
     <span id="music_player" class="drag-and-drop">
         <span class="app_header">
             <span class="app_name">ミュージックプレイヤー</span>
@@ -213,7 +213,7 @@
             <span id="music_player_size"><span class="app_size_change" onclick="music_player_size()"><img src="images/kakudai.png"></span></span>
         </span>
         <span class="app_body">
-                    <input id="up_music" type="file">
+                    <input id="up_music" type="file" multiple>
                 <div id="music_p"></div>
                 <div id="video_p"></div>
             <span id="current_time">/</span>

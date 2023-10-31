@@ -12,10 +12,10 @@ var obj = document.getElementById("up_music");
               var dataUrl = music_reader.result;
             
             if (dataUrl.indexOf('mp3') != -1 || dataUrl.indexOf('wav') != -1 || dataUrl.indexOf('ogg') != -1 || dataUrl.indexOf('m4a') != -1 || dataUrl.indexOf('aac') != -1) {
-                document.getElementById("music_p").innerHTML = "<audio id='music' src='" + dataUrl + "'></audio>";
+                document.getElementById("music_p").innerHTML = "<audio id='music' src='" + dataUrl + "' controls></audio>";
             }
             if (dataUrl.indexOf('mp4') != -1 || dataUrl.indexOf('ogv') != -1 || dataUrl.indexOf('webm') != -1) {
-                document.getElementById("video_p").innerHTML = "<video id='video' src='" + dataUrl + "' width='800px' height='500px'></video>";
+                document.getElementById("video_p").innerHTML = "<video id='video' src='" + dataUrl + "' width='800px' height='500px' controls></video>";
             }
            }
           },false);

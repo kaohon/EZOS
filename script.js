@@ -18,6 +18,18 @@ function theme_change() {
   $("#sita_icon_camera").html('<img src="images/camera_01.png">');
   $("#sita_icon_bscode").html('<img src="images/bscode_01.png">');
   $("#sita_icon_mytube").html('<img src="images/mytube_01.png">');
+  $("#all_icon_internet").html('<img src="images/internet_01.png">');
+  $("#all_icon_music_player").html('<img src="images/musicplayer_01.png">');
+  $("#all_icon_setting").html('<img src="images/setting_01.png">');
+  $("#all_icon_feedback").html('<img src="images/feedback_01.png">');
+  $("#all_icon_addon_store").html('<img src="images/store_01.png">');
+  $("#all_icon_clock").html('<img src="images/clock_01.png">');
+  $("#all_icon_cal").html('<img src="images/cal_01.png">');
+  $("#all_icon_memo").html('<img src="images/memo_01.png">');
+  $("#all_icon_filer").html('<img src="images/file_01.png">');
+  $("#all_icon_camera").html('<img src="images/camera_01.png">');
+  $("#all_icon_bscode").html('<img src="images/bscode_01.png">');
+  $("#all_icon_mytube").html('<img src="images/mytube_01.png">');
 }
 
 // bar
