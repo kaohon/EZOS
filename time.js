@@ -21,11 +21,27 @@ minute = minute<10? "0"+minute:minute;
 second = second<10? "0"+second:second;
 
 // 時刻を整形
+let year_minus = year - 1;
+let year_plus = year + 1;
+let month_minus = month - 1;
+let month_plus = month + 1;
 let mytime = year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + second;
 let ymd = year + "/" + month + "/" + day;
 let hms = hour + ":" + minute + ":" + second + ":" + millisecond;
 
+if (month == "2") {
+    document.getElementById("day_line5").style.display = "none";
+} else if (month == "3" || month == "4" || month == "6" || month == "9" || month == "11") {
+    document.getElementById("day_none31").style.display = "none";
+}
+
 // 現在時刻を表示する
+calender_month.innerHTML = month;
+calender_year.innerHTML = year;
+calender_year_minus.innerHTML = year_minus;
+calender_year_plus.innerHTML = year_plus;
+calender_month_minus.innerHTML = month_minus;
+calender_month_plus.innerHTML = month_plus;
 hmstime.innerHTML = hms;
 ymdtime.innerHTML = ymd;
 time.innerHTML = mytime;
@@ -48,3 +64,18 @@ window.addEventListener("load", function(){
 ymd = document.getElementById("ymd");
 showTime();
 });
+
+window.addEventListener("load", function(){
+    day = document.getElementById("day");
+    showTime();
+    });
+    
+    window.addEventListener("load", function(){
+    month = document.getElementById("month");
+    showTime();
+    });
+    
+    window.addEventListener("load", function(){
+    year = document.getElementById("year");
+    showTime();
+    });

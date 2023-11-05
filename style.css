@@ -32,14 +32,18 @@ body {
     top: 40px;
     left: 50%;
     width: 400px;
-    height: 350px;
+    height: 485px;
     transition: 0.30s;
     border-radius: 10px;
     background-color: black;
     color: #fff;
     box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-    animation: 0.45s ease 0s 1 normal forwards;transform: translate(-50%, 0px);
+    animation: schedule_open 0.45s ease 0s 1 normal forwards;
 }  
+
+.schedule_anime {
+    animation: schedule_close 0.45s ease 0s 1 normal forwards !important;
+}
 
 #control_center_button {
     position: absolute;
@@ -232,6 +236,7 @@ body {
 @keyframes loadanime_sita {
     0% {
         transform: translateY(60px);
+
     } 100% {
         transform: translateY(0px);
     }
@@ -242,6 +247,7 @@ body {
     } 100% {
         transform: translateY(0px);
     }
+
 }
 @keyframes loadanime_hidari {
     0% {
@@ -294,6 +300,20 @@ body {
         opacity: 0;
     }
 } 
+@keyframes schedule_open {
+    0% {
+        transform: translateY(-500px) translate(-50%, 0px);
+    } 100% {
+        transform: translateY(0px) translate(-50%, 0px);
+    }
+}
+@keyframes schedule_close {
+    0% {
+        transform: translateY(0px) translate(-50%, 0px);
+    } 100% {
+        transform: translateY(-500px) translate(-50%, 0px);
+    }
+}
 /* //bar_animes */ 
  
 /* app_header,body */
@@ -927,6 +947,7 @@ body {
     position: absolute;
     margin-top: 30px;
     left: 50%; 
+    border-radius: 10px;
     transform: translate(-50%, 0%);
 }
 
@@ -949,4 +970,59 @@ body {
     height: 252.5px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);   
+}
+
+#calender_years {
+    position: absolute;
+    margin-top: -10px;
+    left: 50%; 
+    transform: translate(-50%, 0%);
+    white-space: nowrap;
+}
+
+#calender_year {
+    font-size: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#calender_year_minus {
+    font-size: 26px;
+}
+
+#calender_year_plus {
+    font-size: 26px;
+}
+
+#calender_months {
+    position: absolute;
+    margin-top: 35px;
+    left: 50%; 
+    transform: translate(-50%, 0%);
+    white-space: nowrap;
+}
+
+#calender_month {
+    font-size: 24px;
+}
+
+#calender_month_minus {
+    font-size: 18px;
+}
+
+#calender_month_plus {
+    font-size: 18px;
+}
+
+#calender_days {
+    position: absolute;
+    left: 50%; 
+    margin-top: -40px;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+}
+
+th, td, tr, table {
+    text-align: center;
+    border: 1px solid #fff;
 }

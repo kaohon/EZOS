@@ -38,7 +38,7 @@ var obj2 = document.getElementById("up_file");
             }
           },false);
 
-var obj3 = document.getElementById("up_account");
+var obj3 = document.getElementsByClassName("up_account");
           
           obj3.addEventListener("change", function(evt){
             var account_file = evt.target.files;

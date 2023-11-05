@@ -35,13 +35,15 @@ function theme_change() {
 // bar
 
 // bar_time
-function schedule() {
-  document.getElementById("schedule").classList.remove("app_close_anime");
+function schedule_open() {
+  document.getElementById("schedule").classList.remove("schedule_anime");
   document.getElementById("schedule").style.display = "block";
+  document.getElementById("schedule_open").innerHTML = '<span onclick="schedule_close()"><span id="time"></span></span>';
 }
 
 function schedule_close() {
-  document.getElementById("schedule").classList.add("app_close_anime");
+  document.getElementById("schedule").classList.add("schedule_anime");
+  document.getElementById("schedule_open").innerHTML = '<span onclick="schedule_open()"><span id="time"></span></span>';
 }
 // //bar_time
 

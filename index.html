@@ -8,6 +8,26 @@
         <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
     </head>
     <body background="images/windows.jpg">
+<!------------------------->
+<!--        初回設定      -->
+<!------------------------->
+<!--
+    <span>
+        <span>EZOSへようこそ</span>
+        <span>まず、初回設定を行いましょう。</span>
+        <span>言語</span>
+        <button>次へ</button>
+        <span>手順は1ステップのみです。</span>
+            プロフィール画像:<input class="up_account" type="file">
+            <span id="ac_name_change">
+                <input id="ac_name_pre" type="text">
+                <button onclick="name_decide()">決定</button>
+            </span>
+            ユーザーネーム:
+            
+
+    </span>
+-->
         <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">EZOS</h1>
 <!------------------------->
 <!--        上バー        -->
@@ -29,13 +49,43 @@
                 <span style="font-size: 22px;" onclick="mute_change()">🔊</span>
                 <input type="range" id="volume" min="0" max="100" step="5">
             </span>
-            <span id="time" onclick="schedule()">
-            </span>
-        </span>
+            <span onclick="schedule_open()" id="schedule_open"><span id="time"></span></span>
         <span id="schedule">
             <span id="my_prof">
-                <span id="account_icon_w"></span>
+                <span id="account_icon_w"><img src="images/account.png"  id='account_icon' width='100px' height='100px'></span>
                 <p id="account_name">guest さん</p>
+            </span>
+            <span id="calender">
+                <span id="calender_years">
+                    <span id="calender_year_minus"></span>
+                    <span id="calender_year"></span>
+                    <span id="calender_year_plus"></span>
+                </span>
+                <span id="calender_months">
+                    <span id="calender_month_minus"></span>
+                    <span id="calender_month"></span>
+                    <span id="calender_month_plus"></span>
+                </span>
+                <span id="calender_days">
+                    <table>
+                        <td>月</td> <td>火</td> <td>水</td> <td>木</td> <td>金</td> <td>土</td> <td>日</td>
+                        <tr>
+                    <span id="day_line1"><td></td> <td></td> <td></td> <td>1</td> <td>2</td> <td>3</td> <td>4</td></span>
+                        </tr>
+                        <tr>
+                    <br><span id="day_line2"><td>5</td> <td>6</td> <td>7</td><td>8</td> <td>9</td> <td>10</td> <td>11</td></span>
+                        </tr>
+                        <tr>
+                    <br><span id="day_line3"><td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td></span>
+                        </tr>
+                        <tr>
+                    <br><span id="day_line4"><td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td> <td>25</td></span>
+                        </tr>
+                        <tr>
+                    <br><span id="day_line5"><td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td> <td id="day_none31">31</td></span>
+                        </tr>
+                    </table>
+                </span>
             </span>
         </span>
     </span>
@@ -89,8 +139,8 @@
 <!--     ウィジェット      -->
 <!------------------------->
     <span id="widget">
-        EZOS ChangeLog #2
-        <br>・タイマー機能のデザイン変更
+        EZOS ChangeLog #2.75
+        <br>・
     </span>
 <!------------------------->
 <!--     /ウィジェット     -->
@@ -173,7 +223,7 @@
         </span>
         <span class="app_body">
             <span id="setting_system" class="setting_tabs">👱 プロフィール</span>
-                アカウントアイコンの変更:<input id="up_account" type="file">
+                アカウントアイコンの変更:<input class="up_account" type="file">
                 <span id="ac_name_change">
                     <input id="ac_name_pre" type="text">
                     <button onclick="name_decide()">決定</button>
