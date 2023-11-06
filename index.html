@@ -6,28 +6,27 @@
         <title>EZOS-Canary</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="14985201847-fvrbdsofjvvobk1r1jr761mbtq12ms76.apps.googleusercontent.com">
     </head>
     <body background="images/windows.jpg">
 <!------------------------->
 <!--        初回設定      -->
 <!------------------------->
-<!--
-    <span>
-        <span>EZOSへようこそ</span>
-        <span>まず、初回設定を行いましょう。</span>
-        <span>言語</span>
-        <button>次へ</button>
-        <span>手順は1ステップのみです。</span>
-            プロフィール画像:<input class="up_account" type="file">
-            <span id="ac_name_change">
+    <span id="firstsession">
+        <span id="welcome">EZOSへようこそ</span>
+        <br><span class="session_body">まず、初回設定を行いましょう。(リロードでスキップ出来ます。)</span>
+        <br><span>言語</span>
+            <br><span class="session_body">手順は1ステップのみです。</span>
+            <br>プロフィール画像:<input class="up_account" type="file">
+            <br>ユーザーネーム:<span id="ac_name_change">
                 <input id="ac_name_pre" type="text">
                 <button onclick="name_decide()">決定</button>
             </span>
-            ユーザーネーム:
-            
-
+            <br>設定は以上で完了です。
+            <br><button>完了</button>
     </span>
--->
+
         <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">EZOS</h1>
 <!------------------------->
 <!--        上バー        -->
@@ -51,6 +50,31 @@
             </span>
             <span onclick="schedule_open()" id="schedule_open"><span id="time"></span></span>
         <span id="schedule">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <script>
+                function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'test.php');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                console.log('Signed in as: ' + xhr.responseText);
+            };
+            xhr.send('idtoken=' + id_token);
+            window.location.href = 'index.php';
+            // auth2 is initialized with gapi.auth2.init() and a user is signed in.
+if (auth2.isSignedIn.get()) {
+  var profile = auth2.currentUser.get().getBasicProfile();
+  console.log('ID: ' + profile.getId());
+  console.log('Full Name: ' + profile.getName());
+  console.log('Given Name: ' + profile.getGivenName());
+  console.log('Family Name: ' + profile.getFamilyName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+
+        }
+                </script>
             <span id="my_prof">
                 <span id="account_icon_w"><img src="images/account.png"  id='account_icon' width='100px' height='100px'></span>
                 <p id="account_name">guest さん</p>
@@ -139,8 +163,10 @@
 <!--     ウィジェット      -->
 <!------------------------->
     <span id="widget">
-        EZOS ChangeLog #2.75
-        <br>・
+        EZOS ChangeLog #3
+        <br>・Google、GitHubとの連携機能(α)
+        <br>・カレンダー機能の実装(スケジュール機能は技術的に自作無理;;)
+        <br>・初期設定画面の実装(β)
     </span>
 <!------------------------->
 <!--     /ウィジェット     -->
@@ -494,5 +520,6 @@
         <script src="script.js"></script>
         <script src="camera.js"></script>
         <script src="file.js"></script>
+        <script src="firstsession.js"></script>
 </body>
 </html>

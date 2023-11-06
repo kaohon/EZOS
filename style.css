@@ -6,6 +6,26 @@ body {
     user-select: none;
 }
 
+#firstsession {
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+    width: 55%;
+    height: 65%;
+    top: 50%; 
+    left: 50%; 
+    transition: 0.30s;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    animation: firstsession_open 0.45s ease 0s 1 normal forwards;
+} #welcome {
+    font-size: 72px;
+} .session_body {
+    font-size: 36px;
+}
 /* bar */
 
 #ue {
@@ -233,6 +253,13 @@ body {
 
 /* //bar */ 
 /* bar_animes */ 
+@keyframes firstsession_open {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    } 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 @keyframes loadanime_sita {
     0% {
         transform: translateY(60px);
