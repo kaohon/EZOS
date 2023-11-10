@@ -48,7 +48,7 @@
                 <span style="font-size: 22px;" onclick="mute_change()">🔊</span>
                 <input type="range" id="volume" min="0" max="100" step="5">
             </span>
-            <span onclick="schedule_open()" id="schedule_open"><span id="time"></span></span>
+            <span id="schedule_open" onclick="schedule_open()"><span id="time"></span></span>
         <span id="schedule">
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
             <script>
@@ -63,14 +63,12 @@
             xhr.send('idtoken=' + id_token);
             window.location.href = 'index.php';
             // auth2 is initialized with gapi.auth2.init() and a user is signed in.
-if (auth2.isSignedIn.get()) {
-  var profile = auth2.currentUser.get().getBasicProfile();
-  console.log('ID: ' + profile.getId());
-  console.log('Full Name: ' + profile.getName());
-  console.log('Given Name: ' + profile.getGivenName());
-  console.log('Family Name: ' + profile.getFamilyName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
+            function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // GoogleのID
+  console.log('Name: ' + profile.getName()); // アカウント名
+  console.log('Image URL: ' + profile.getImageUrl()); // プロフィール画像
+  console.log('Email: ' + profile.getEmail()); // ユーザーのメールアドレス
 }
 
         }
